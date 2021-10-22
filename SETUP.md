@@ -59,3 +59,8 @@ This guide will have you:
 1. Review application within Dynatrace
 
     Follow the instructions within the `Lab 1 - OneAgent Observability --> Host View` page in [this guide](https://aws-modernize-workshop-stg.alliances.dynatracelabs.com/).  You are welcome to review the other pages in `Lab 1` to get familiar with the the built-in views of Dynatrace 
+
+<hr>
+
+[<img src="images/prev.png" width="50px" height="50"/>](README.md) [<img src="images/next.png" width="50px" height="50"/>](ONBOARD.md)
+

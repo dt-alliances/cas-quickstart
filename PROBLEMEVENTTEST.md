@@ -37,3 +37,7 @@
     ```
 
 ## Step 2: Verify the subscription
+
+<hr>
+
+[<img src="images/prev.png" width="50px" height="50"/>](WEBHOOK.md) [<img src="images/next.png" width="50px" height="50"/>](PROBLEMEVENT.md)

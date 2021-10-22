@@ -143,3 +143,6 @@ This is needed to support SLO evaluations where Dynatrace is the data source.
     - Keptn API URL: https://[YOUR-CAS-URL]/api
     - Connection Successful: true. 
     ```
+<hr>
+
+[<img src="images/prev.png" width="50px" height="50"/>](SETUP.md) [<img src="images/next.png" width="50px" height="50"/>](WEBHOOK.md)

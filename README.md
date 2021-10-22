@@ -45,4 +45,4 @@ Follow the instructions for each step below in order.
 
 # Support
 
-For help or questions, email [Rob Jahn](https://www.linkedin.com/in/robjahn/) of the Dynatrace Technical Alliances team (based in Boston) @ rob.jahn@dynatrace.com
+For help or questions, email [Rob Jahn](https://www.linkedin.com/in/robjahn/) of the Dynatrace Technical Alliances team (based in Boston) @ rob.jahn@dynatrace.com 

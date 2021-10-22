@@ -33,3 +33,7 @@ http://[hostname or IP]
 ```
 
 ## Step 5: Verify the subscription
+
+<hr>
+
+[<img src="images/prev.png" width="50px" height="50"/>](PROBLEMEVENTTEST.md) [<img src="images/next.png" width="50px" height="50"/>](SLO.md)
