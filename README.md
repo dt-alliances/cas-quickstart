@@ -4,18 +4,6 @@ This is a quick start guide for the Dynatrace Cloud Automation Solution (CAS).
 
 The guide shows how to setup a sample application and configure the Dynatrace problem notification webhook to send problem events to the Cloud Automation control plane. Once events are in the control plane, subscriptions to this event can be configured a downstream system.
 
-# Prerequisites
-
-In order to provide early access to partners, Dynatrace will provision a “sprint” Dynatrace account and "sprint" environments.
-
-1.  Within this account, Dynatrace will create:
-    * Dynatrace instance with full admin rights. For example https://[YOUR-DT-ENVIRONMENT].sprint.dynatracelabs.com
-    * Cloud Automation Solution instance. For example https://[YOUR-CAS-ENVIRONMENT].cloudautomation.sprint.dynatracelabs.com 
-1. Partner manages team members access using Dynatrace account settings
-1. Partner provides and manages a virtual machine with OneAgent and sample application. See Quick start guide below.
-
-# Quick start guide
-
 The Quick start will setup an environment as follows:
 
 1. Sample application web interface - viewable in a browser
@@ -28,6 +16,18 @@ The Quick start will setup an environment as follows:
 1. Cloud Automation command line utility - allows creating projects, onboarding services, and sending new artifact events to CloudAutomation.
 
 <img src="images/setup.png" width="75%" height="75%">
+
+# Prerequisites
+
+In order to provide early access to partners, Dynatrace will provision a “sprint” Dynatrace account and "sprint" environments.
+
+1.  Within this account, Dynatrace will create:
+    * Dynatrace instance with full admin rights. For example https://[YOUR-DT-ENVIRONMENT].sprint.dynatracelabs.com
+    * Cloud Automation Solution instance. For example https://[YOUR-CAS-ENVIRONMENT].cloudautomation.sprint.dynatracelabs.com 
+1. Partner manages team members access using Dynatrace account settings
+1. Partner provides and manages a virtual machine with OneAgent and sample application. See Quick start guide below.
+
+# Quick start guide
 
 Follow the instructions for each step below in order.
 
