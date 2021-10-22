@@ -1,8 +1,6 @@
 # Trigger a problem event using Cloud Automation API
 
-## Step 1: Create a webhook subscription for the problem event
-
-## Step 2: Send a problem event to the Cloud Automation control plane
+## Step 1: Send a problem event to the Cloud Automation control plane
 
 1. Within your Cloud Automation web UI, click on the person icon on the top right to expand the `Get started` popup.  From the popup, use the `copy keptn api token` button.
 
@@ -38,4 +36,4 @@
     ```
     ```
 
-## Step 3: Verify the subscription
+## Step 2: Verify the subscription

@@ -34,6 +34,8 @@ Keptn cluster version: 0.9.2
 
 1. Within your Cloud Automation web UI, click on the person icon on the top right to expand the `Get started` popup.  From the popup, use the `copy keptn auth command` button
 
+<img src="images/bridge-tokens.png" width="30%" height="30%">
+
 1. Authenticate the Keptn CLI by pasting the `keptn auth` command into the AWS CloudShell.  You should see output similar to this:
 
     ```
@@ -57,7 +59,7 @@ The following set of command are run in the AWS CloudShell and then verified in 
     cd cas-quickstart/keptn
     ```
 
-1. Setup variables for the arguments
+1. Setup variables for the arguments.  Use theses values as they are listed below.
 
     ```
     export KEPTN_PROJECT=dt-orders
@@ -103,7 +105,11 @@ The following set of command are run in the AWS CloudShell and then verified in 
     Resource has been uploaded.
     ```
 
-1. From the Cloud Automation UI, verify that you have a `dt-orders` project and a `frontend` service within it
+1. From the Cloud Automation UI, verify that you have a `dt-orders` project and a `frontend` service within it.
+
+    The configured project and service will look like this. 
+
+   <img src="images/bridge-project.png" width="30%" height="30%">
 
 ## Step 3: Configure project with Dynatrace integration
 
@@ -115,7 +121,11 @@ This is needed to support SLO evaluations where Dynatrace is the data source.
 
 1. Configure Dynatrace secret
 
-    From the Cloud Automation UI, configure the Dynatrace URL and API token as a secret. Follow `2. Connect Cloud Automation to Dynatrace` step from [this guide](https://www.dynatrace.com/support/help/shortlink/qg-start#h2-connect-cloud-automation-to-dynatrace) using the `Via the CA bridge` instructions.  You don't need to do the other step on that docs page.
+    From the Cloud Automation UI, configure the Dynatrace URL and API token as a secret. Follow `2. Connect Cloud Automation to Dynatrace` step from [this guide](https://www.dynatrace.com/support/help/shortlink/qg-start#h2-connect-cloud-automation-to-dynatrace) using the `Via the CA bridge` instructions.  You don't need to do the other step on that docs page.  
+
+    The configured secret will look like this. 
+
+    <img src="images/bridge-secret.png" width="70%" height="70%">
 
 1. Configure Dynatrace Monitoring for the project
 
