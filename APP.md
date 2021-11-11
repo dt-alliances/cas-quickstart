@@ -39,7 +39,7 @@ The following commands are just reference
 
 * View running containers: `sudo docker ps`
 * View logs of sample app or the load app `sudo docker logs [CONTAINER ID]`  (Get [CONTAINER ID] from the `sudo docker ps` command)
-* Follow logs of sample app `sudo docker logs [CONTAINER ID] - f`  (Use ctrl-c to exit)
+* Follow logs of sample app `sudo docker logs [CONTAINER ID] -f`  (Use ctrl-c to exit)
 * Stop the application `sudo ./stop-app.sh`
 
 <hr>
