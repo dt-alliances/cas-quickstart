@@ -1,0 +1,11 @@
+{
+   "type": "sh.keptn.event.production.mysequence.triggered",
+   "specversion":"1.0",
+   "source":"api",
+   "data":{
+      "project":"demo",
+      "stage":"production",
+      "service":"casdemoapp",
+      "custom":"this is custom data"
+   }
+}

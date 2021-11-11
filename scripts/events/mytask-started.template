@@ -1,0 +1,12 @@
+{
+  "data": {
+    "project":"demo",
+    "stage":"production",
+    "service":"casdemoapp"
+  },
+  "source": "api",
+  "specversion": "1.0",
+  "type": "sh.keptn.event.mytask.started",
+  "shkeptncontext": "REPLACE_ID",
+  "triggeredid": "REPLACE_TRIGGER_ID"
+}

@@ -1,0 +1,24 @@
+{
+  "responseTimeDegradation": {
+    "detectionMode": "DETECT_USING_FIXED_THRESHOLDS",
+    "thresholds": {
+      "responseTimeThresholdMilliseconds": 100,
+      "slowestResponseTimeThresholdMilliseconds": 1000,
+      "loadThreshold": "FIVE_REQUESTS_PER_MINUTE",
+      "sensitivity": "MEDIUM"
+    }
+  },
+  "loadDrop": {
+    "enabled": false
+  },
+  "loadSpike": {
+    "enabled": false
+  },
+  "failureRateIncrease": {
+    "detectionMode": "DETECT_USING_FIXED_THRESHOLDS",
+    "thresholds": {
+      "threshold": 10,
+      "sensitivity": "MEDIUM"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+config:
+  - release_validation_dashboard: "release_validation_dashboard.json"
+
+release_validation_dashboard:
+  - name: "KQG;project=demo;stage=production;service=casdemoapp"
+  - owner: "{{ .Env.OWNER }}"

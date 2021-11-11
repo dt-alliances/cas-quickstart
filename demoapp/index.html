@@ -1,0 +1,219 @@
+<html>
+<head>
+    <title>Dynatrace Demo App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+    <style>
+        body {
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            -moz-transition-property: text-shadow;
+            -moz-transition-duration: 4s;
+            -webkit-transition-property: text-shadow;
+            -webkit-transition-duration: 4s;
+            text-shadow: none;
+        }
+        body.blurry {
+            -moz-transition-property: text-shadow;
+            -moz-transition-duration: 4s;
+            -webkit-transition-property: text-shadow;
+            -webkit-transition-duration: 4s;
+            text-shadow: #fff 0px 0px 25px;
+        }
+
+        a {
+            color: white;
+            font-size: 125%;
+        }
+
+        .textColumn, .linksColumn {
+            padding: 2em;
+        }
+
+        .textColumn {
+            /* background-color: #73A53E; */
+            /*background-color: #EEA53E; */
+            color: black;
+            background-color: BACKGROUND-COLOR;
+            position: absolute;
+            top: 0px;
+            right: 75%;
+            bottom: 0px;
+            left: 0px;
+            text-align: left;
+            padding-top: 7em;
+        }
+
+        .textColumn p {
+            width: 75%;
+            float: left;
+        }
+
+        .linksColumn {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 25%;
+            background-color: black;
+        }
+
+        h1 {
+            color: #33342D;
+            font-size: 500%;
+            font-weight: normal;
+            margin-bottom: 0em;
+        }
+
+        h2 {
+            font-size: 200%;
+            font-weight: normal;
+            margin-bottom: 0em;
+        }
+
+        ul {
+            padding-left: 1em;
+            margin: 0px;
+        }
+
+        li {
+            margin: 1em 0em;
+        }
+
+        td {
+            vertical-align: top;
+            text-align: left;
+        }
+        th {
+            vertical-align: top;
+            text-align: left;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="textColumn">
+        <h2>Running Feature # FEATURE_NUMBER</h2>
+        <br>
+        <br>
+        <br>
+        <div>
+        <h3>Here are the "problems" we simulate. </h3>
+   
+        <table style="color:black">
+        <tr><th>#</th><th>Description</th></tr> 
+        <tr><td>1.&nbsp;</td><td>no problem</td></tr> 
+        <tr><td>2.&nbsp;</td><td>50% of /api/invoke requests return HTTP 500 Status Code</td></tr> 
+        <tr><td>3.&nbsp;</td><td>Higher response times all requests</td></tr> 
+        </table>
+        <h4>Features be adjusted on the fly by calling "/api/feature?newFeatureNumber=1"</h4>
+        </div>
+
+        <div>
+            <br>
+            <br>
+            <h2>Learn more about Dynatrace & Cloud Automation</h2>
+            <div style="padding:12px;">
+            <ul>
+                <li><a href="https://www.dynatrace.com">Dynatrace</a></li>            
+                <li><a href="https://keptn.sh">Keptn</a></li> 
+            </ul>
+            </div>
+        </div>
+
+    </div>
+    <div class="linksColumn">
+        <img width="800px"src="img/banner.png" />
+
+        <table>
+        <tr>
+            <td>
+                <br>
+                <br>
+            <h2>Lets trace some code!</h2>
+
+            <div style="padding:12px;">
+                Say Something : <input style="width:300px;" type="textbox" id="SayText" value="Just say whatever you want"></input>
+                <button id="Echo">Echo</button>
+            </div>
+
+            <div style="padding:12px;">
+                Invoke Server Side URL : <input style="width:250px;" type="textbox" id="RemoteURL" value="https://www.dynatrace.com"></input>
+                <button id="Invoke">Invoke</button>
+            </div>
+
+            <div style="padding:12px;">
+                Override sleep time for requests (in ms): <input style="width:50px;" type="textbox" id="SleepTime" value="1000"></input>
+            </div>
+
+            <!--<div style="padding:12px;" id="loginarea">
+                Your Username (for user tagging) : <input type="textbox" id="Username" value="Joe Mueller"></input>
+                <button id="Login">LOG ME IN</button>
+            </div>-->
+
+            <div style="padding:12px;">
+                <button id="Feature">GET CURRENT FEATURE ID</button>
+            </div>
+
+            <div>
+                <hr>
+                <p id="result">Results will show up here</p>
+            </div>
+
+        </td>
+        </tr>
+        </table>
+
+    </div>
+
+    <script>
+
+	    function getRESTEndpoint() {
+		  return window.location.href;
+		}
+
+	    function executeCall(requestString, sleep) {
+          var sleepTime = $('#SleepTime').val();
+	      var fullURL = getRESTEndpoint() + requestString;
+		  if(fullURL.indexOf("?") > 0) fullURL = fullURL + "&sleep=" + sleepTime;
+		  else fullURL = fullURL + "?sleep=" + sleepTime;
+
+	      $.ajax({
+            url: fullURL
+          }).success(function(data) {
+             $('#result').text(data);
+          }).fail(function() {
+             $('#result').text("invoke failed!");
+	      });
+	    }
+
+		$("#Echo").click(function () {
+          var text = $('#SayText').val();
+		  executeCall("api/echo?text=" + text);
+        });
+
+		$("#Invoke").click(function () {
+          var text = $('#RemoteURL').val();
+		  executeCall("api/invoke?url=" + text);
+        });
+
+		$("#Feature").click(function () {
+		  executeCall("api/feature");
+        });
+
+		$("#Login").click(function () {
+		  var username = $('#Username').val();
+		  var loggedinusername = $("#loggedinusername");
+		  if(loggedinusername.length <= 0) {
+		    $("<div id=\"usrhelparea\">You are now Logged in as user: <p id=\"loggedinusername\">" + username + "</p></div>").appendTo("#loginarea")
+		  } else {
+		    loggedinusername.text(username);
+		  }
+		  executeCall("api/login?username=" + username);
+        });
+
+    </script>
+</body>
+</html>

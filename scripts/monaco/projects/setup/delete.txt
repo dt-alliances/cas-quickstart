@@ -1,0 +1,6 @@
+delete:
+  - "dashboard/KQG;project=demo;stage=production;service=casdemoapp"
+  - "auto-tag/keptn_project"
+  - "auto-tag/keptn_service"
+  - "auto-tag/keptn_stage"
+  - "auto-tag/keptn_deployment"
