@@ -1,16 +1,23 @@
 #!/bin/bash
 
-echo "==================================================================="
-echo "1) production.mysequence.triggered"
-echo "2) sh.keptn.event.mytask.started"
-echo "3) sh.keptn.event.mytask.finished"
-echo "==================================================================="
-read -p "Pick the number for the event to trigger : " REPLY;
-echo ""
+# this is optonal.  If dont pass it in, then you get a menu to enter it
+EVENT_NUMBER=$1
+
+if [ -z $EVENT_NUMBER ]; then
+
+    echo "==================================================================="
+    echo "1) production.mysequence.triggered"
+    echo "2) sh.keptn.event.mytask.started"
+    echo "3) sh.keptn.event.mytask.finished"
+    echo "==================================================================="
+    read -p "Pick the number for the event to trigger : " EVENT_NUMBER;
+    echo ""
+
+fi
 
 SEQUENCE_FILE="./events/sequence.txt"
 TRIGGER_FILE="./events/trigger.txt"
-case "$REPLY" in
+case "$EVENT_NUMBER" in
     "1") 
         TEMPLATE_FILE="./events/mysequence-triggered.template"
         KEPTN_CMD="keptn send event --file $TEMPLATE_FILE"
