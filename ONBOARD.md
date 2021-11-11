@@ -76,7 +76,7 @@ From the Cloud Automation UI, configure the Dynatrace URL and API token that you
 
 The configured secret will look like this. 
 
-<img src="images/XXXX.png" width="70%" height="70%">
+<img src="images/dynatrace-secret.png" width="70%" height="70%">
 
 <hr>
 
