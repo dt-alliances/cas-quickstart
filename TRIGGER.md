@@ -1,14 +1,12 @@
 # Trigger a sequence
 
-The picture below depicts the flow you will perform in this step.
+The picture below depicts the sequence tasks you will perform in this section.  
 
 <img src="images/trigger-overview.png" width="70%" height="70%">
 
-To make is easy to perform this flow, a script called `trigger.sh` will send in the various Keptn events as shown in the picture below.
+To make is easy to perform this flow, a script called `trigger.sh` will send in the various Keptn events.
 
-<img src="images/trigger-flow.png" width="70%" height="70%">
-
-## Step 1: Start sequence with a “triggered” event type
+## Step 1: Start sequence with a `production.mysequence.triggered` event type
 
 1. In the SSH terminal, run this command
 
@@ -22,8 +20,9 @@ To make is easy to perform this flow, a script called `trigger.sh` will send in 
     ```
     ===================================================================
     1) production.mysequence.triggered
-    2) sh.keptn.event.mytask.started
-    3) sh.keptn.event.mytask.finished
+    2) sh.keptn.event.mytask-silent.started
+    3) sh.keptn.event.mytask-silent.finished
+    4) sh.keptn.event.mytask-interactive.finished
     ===================================================================
     Pick the number for the event to trigger : 1
 
@@ -33,39 +32,79 @@ To make is easy to perform this flow, a script called `trigger.sh` will send in 
 
 1. Review the bridge pick the `demo` project and `sequence` menu to view the sequence in a started state.
 
-1. Review the webhook.site to view the generated event. It will look like this
+    <img src="images/mysequence-started.png" width="50%" height="50%">
 
-    <img src="images/event-example.png" width="50%" height="50%">
-
-## Step 2: Simulate the task has started with the started event
+## Step 2: Simulate the `mytask-silent.started` and `mytask-silent.finished` events
 
 1. In the SSH terminal, run the `./trigger.sh` command again and pick options `2`
 
     ```
     Pick the number for the event to trigger : 2
 
-    Running 'keptn send event --file ./events/mytask-started.json'
+    Running 'keptn send event --file ./events/mytask-silent-started.json'
     OUTPUT = ID of Keptn context: 409d7b25-d04b-44f3-a636-d2fc8d67819a
     ```
 
-1. Review the bridge pick the `demo` project and `sequence` menu to view the sequence, but not yes started.
-
-1. Review the webhook.site to view the generated event
-
-## Step 3: Simulate the task has started with the started event
-
-1. In the SSH terminal, run the `./trigger.sh` command again and pick options `3    `
+1. In the SSH terminal, run the `./trigger.sh` command again and pick options `3`
 
     ```
     Pick the number for the event to trigger : 3
 
-    Running 'keptn send event --file ./events/mytask-started.json'
+    Running 'keptn send event --file ./events/mytask-silent-finished.json'
     OUTPUT = ID of Keptn context: 409d7b25-d04b-44f3-a636-d2fc8d67819a
+    ```
+
+1. Review the bridge pick the `demo` project and `sequence` menu to view the sequence.  The `mytask-silent` should be complete and the `mytask-interactive` is now triggered since that was the next task in the shipyard file.
+
+    <img src="images/mysequence-silent.png" width="50%" height="50%">
+
+1. Review the webhook.site to view the generated finished event. It will look like this and is the result of the Keptn webhook that you created earlier.
+
+    <img src="images/silent-event-example.png" width="50%" height="50%">
+
+## Step 3: Simulate the `mytask-interactive.finished` event
+
+1. Review the webhook.site to view the generated trigger event. It will look like this and is the result of the other Keptn webhook that you created earlier.
+
+    <img src="images/interactive-event-example.png" width="50%" height="50%">
+
+1. In the Keptn sequence, click on the computer icon and copy the value for the `triggeredid` attribute as shown below.  You will need this to pass in the next step. 
+
+    <img src="images/mysequence-get-triggerid.png" width="75%" height="75%">
+
+
+1. In the SSH terminal, run the `./trigger.sh` command again and pick options `4`.  At the `Enter TRIGGER_ID` prompt, paste in the `triggeredid` value from the previous step.
+
+    ```
+    Pick the number for the event to trigger : 4
+
+    Running 'keptn send event --file ./events/mytask-interactive-finished.json'
+    Enter TRIGGER_ID : f75a563f-8135-4bf8-a747-be9386497964
+    OUTPUT = ID of Keptn context: b5a13d2c-a172-4030-8c36-1e6601b4b304
     ```
 
 1. Review the bridge pick the `demo` project and `sequence` menu to view the sequence in a finished state.
 
-1. Review the webhook.site to view the generated event
+    <img src="images/mysequence-complete.png" width="75%" height="75%">
+
+## Step 4: So what did we do?
+
+Now that you ran the sequence, here are a pictures to help explain what was happening.
+
+<img src="images/webhook-silent-flow-details.png" width="75%" height="75%">
+<img src="images/webhook-interactive-flow-details.png" width="75%" height="75%">
+
+## Step 5: Experiment with different status values
+
+In this project within the `events` subfolder, there are files with a `.template` extension.  So simply adjust a template file and rerun the scenario using the `trigger.sh` script.
+* You can edit the values of the `status` and `result` attributes to simulate different sequence results.  
+* The template files are used as the source when the `trigger.sh` is called.   
+* NOTE: the files with a `.json` extension are generated by the `trigger.sh`, so don't edit those ones.
+
+As reference:
+* `status` expresses the task execution itself, meaning could the keptn service execute the task. Valid values are: `succeeded`, `errored`, `unknown`
+* `result` expresses is the result of the task being execution. Valid values are: `pass`, `warning`, `fail`
+* For example, a test task was called and it did run, so the `status = succeeded` but, the test being run failed so `result=fail`. 
 
 <hr>
 

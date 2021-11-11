@@ -4,9 +4,9 @@
     "stage":"production",
     "service":"casdemoapp"
   },
-  "source": "api",
+  "source": "cas-quickstart",
   "specversion": "1.0",
-  "type": "sh.keptn.event.mytask.started",
+  "type": "sh.keptn.event.mytask-silent.started",
   "shkeptncontext": "REPLACE_ID",
   "triggeredid": "REPLACE_TRIGGER_ID"
 }

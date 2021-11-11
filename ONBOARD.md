@@ -42,13 +42,13 @@ In the SSH terminal, run these commands to install and authenticate the Keptn CL
     Successfully authenticated against the Keptn cluster https://[YOUR-URL]/api
     ```
 
-## Step 2: Make a project and add a service within Cloud Automation
+## Step 2: Create Keptn project within Cloud Automation
 
 In the SSH terminal, run this command that will automate the process to add a project, service, and supporting project files.
 
 ```
 cd ~/cas-quickstart/scripts
-./onboard-service.sh
+./create-keptn-projects.sh
 ```
 
 1. From the Cloud Automation UI, verify that you have a `demo` project and a `casdemoapp` service within it. The configured project and service will look like this. 

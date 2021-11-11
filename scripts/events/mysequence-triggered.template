@@ -1,7 +1,7 @@
 {
    "type": "sh.keptn.event.production.mysequence.triggered",
    "specversion":"1.0",
-   "source":"api",
+   "source":"cas-quickstart",
    "data":{
       "project":"demo",
       "stage":"production",

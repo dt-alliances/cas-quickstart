@@ -1,8 +1,6 @@
 # Provision Virtual Machine with the OneAgent
 
-Follow these steps to provision a Ubuntu virtual machine on either AWS or Azure with the Dynatrace OneAgent and the required Unix programs to run the sample application.  
-
-The Dynatrace OneAgent is the same instruction for either Cloud provider. 
+Follow these steps to provision a Ubuntu Virtual Machine (VM) with the Dynatrace OneAgent and the required Unix programs to run the sample application.  
 
 ## Step 1: Provision Virtual Machine
 
@@ -10,11 +8,15 @@ The virtual machine will require the following:
 * Ubuntu LTS 20.04
 * 16GB memory
 * port 22 and 80 is open
-* docker & docker-compose installed
+* programs:
+    * docker
+    * docker-compose
+    * git
+    * jq
 
-See the `AWS` or `AZURE` section below for instructions.
+You can use a VM of your choice, but below are instructions for provisioning a VM on `AWS` or `AZURE`
 
-## AWS
+### AWS
 
 1. Provision EC2 instance with AMI of `AWS Linux 2 AMI` with the following:
 
@@ -50,7 +52,7 @@ See the `AWS` or `AZURE` section below for instructions.
     sudo systemctl status docker
     ```
 
-## Azure
+### Azure
 
 1. Optional but recommended to make a new resource group with name such as `dynatrace-cas`
 
@@ -96,12 +98,10 @@ To install the [Dynatrace OneAgent](https://www.dynatrace.com/support/help/setup
 1. Pick `Start Installation` and then the `Linux` option
 1. One the `Download Dynatrace OneAgent for Linux` page, choose `Create token` button
 1. Copy and paste the `Download the installer` and `Run the installer` commands from a SSH shell for the virtual machine
-1. Back in Dynatrace, pick the `Show deployment status` button to monitor the install
-1. In Dynatrace, navigate to `Hosts` menu on the bottom left side to review the host
 
 ## Step 3: Verify Dynatrace monitoring of sample application
 
-Within Dynatrace, navigate to the `hosts` view and you should see your host.
+In Dynatrace, navigate to `Hosts` menu on the bottom left side to review the host list. You should see your host.
 
 <hr>
 
