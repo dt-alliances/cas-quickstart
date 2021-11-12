@@ -6,7 +6,8 @@
     "status": "succeeded",
     "result": "pass", 
     "custom":"this is custom data",
-    "mytask": {
+    "custom1":"this is custom1 data",
+    "mytask-interactive": {
       "link": "https://a-back-link-to-result",
       "more": "even more data"
     }

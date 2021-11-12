@@ -6,7 +6,7 @@
     "status": "succeeded",
     "result": "pass",
     "custom":"this is custom data",
-    "mytask": {
+    "mytask-silent": {
       "link": "https://a-back-link-to-result",
       "more": "even more data"
     }
@@ -14,6 +14,5 @@
   "source": "cas-quickstart",
   "specversion": "1.0",
   "type": "sh.keptn.event.mytask-silent.finished",
-  "shkeptncontext": "REPLACE_ID",
-  "triggeredid": "REPLACE_TRIGGER_ID"
+  "shkeptncontext": "REPLACE_ID"
 }
