@@ -7,7 +7,7 @@ Follow these steps to start the sample application and view it in a browser
 1. In the SSH terminal, change to the scripts directory and start up the application
 
     ```
-    cd ~/cas-quickstart/scripts
+    cd ~/cas-quickstart/scripts/app
     sudo ./start-app.sh
     ```
 

@@ -29,9 +29,10 @@ This setup of the Dynatrace configuration uses the [Dynatrace Monitoring as Code
 1. In the SSH terminal, run these commands to download and install the monaco binary. 
 
     ```
+    cd ~
     curl -L https://github.com/dynatrace-oss/dynatrace-monitoring-as-code/releases/download/v1.6.0/monaco-linux-amd64 -o monaco
     chmod +x monaco
-    sudo mv ~/Downloads/monaco /usr/local/bin/
+    sudo mv ~/monaco /usr/local/bin/
     ```
 
 1. Verify the monaco binary, by running this command. The output should display 1.6.0
@@ -65,7 +66,7 @@ A custom script called `setup-dynatrace-config.sh` is used to call both monaco a
 
     ```
     cd ~/cas-quickstart/scripts
-    ./setup-dynatrace-config.sh yourname@company.com
+    ./setup-dynatrace-config.sh your-email@company.com
     ```
 
     Output should look like:

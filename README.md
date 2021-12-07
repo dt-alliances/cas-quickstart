@@ -1,12 +1,12 @@
 # Overview
 
-[Dynatrace Cloud Automation](https://www.dynatrace.com/platform/cloud-automation/) powered by [Keptn](https://keptn.sh) can orchestrate different delivery or operational processes that are part of an application's lifecycle. 
+The guide shows how to setup and use the [Dynatrace Cloud Automation](https://www.dynatrace.com/platform/cloud-automation/) control plane that provides an easy, event-based integration point for external tools such as testing services, notification services, and incident management services.
 
-Cloud Automation also provides an easy, event-based integration point for external tools (such as testing services, notification services, and incident management services) via webhooks. With external tool integration, you can set external tools to send events to Dynatrace, or set Dynatrace Cloud Automation to send events to external tools, which can then execute certain tasks in response.
+This guide currently showcases webhook integrations, but the plan is to incorporate a Cloud Automation remote execution plane as to aide in the development and test of custom services.
 
-The guide shows how to setup a sample application and configure webhooks to send events into the Cloud Automation control plane. Once events are in the control plane, subscriptions to this event can be configured a downstream system.
+For help or questions, email [Rob Jahn](https://www.linkedin.com/in/robjahn/) of the Dynatrace Tech Alliances team @ rob.jahn@dynatrace.com 
 
-# Prerequisite Knowledge
+# Prerequisite knowledge
 
 Dynatrace
 * Understanding of Dynatrace, OneAgent and the Software Intelligence Platform
@@ -14,36 +14,38 @@ Dynatrace
 * Know how to navigate the Dynatrace web interface to find Services, Release Overview, Dashboards
 
 Cloud Automation Module
-* Understanding of Keptn and Cloud Automation architecture and design conceptss
+* Understanding of Cloud Automation architecture and design concepts
 
-# Dynatrace Accounts
+# Prerequisites
 
-In order to provide early access to webhooks, Dynatrace will provision a `sprint` Dynatrace account and `sprint` environments.
+The following items comprise your environment
 
-1.  Within this `sprint` account, Dynatrace will create:
+1. Dynatrace Accounts:
     * Dynatrace SaaS environment
     * Cloud Automation Solution SaaS instance
-1. You manage team members access using Dynatrace account settings. Cloud Automation uses the same SSO as Dynatrace, so you will use the same login for both.  This will also be the same SSO to your production Dynatrace trial or licensed environments.
-1. You provide and manages a virtual machine with OneAgent and sample application. See Quick start guide below.
+1. Permissions:
+    * You manage team members access using Dynatrace account settings. 
+    * Cloud Automation uses the same SSO as Dynatrace, so you will use the same login for both  
+1. Compute
+    * You provide and manage a virtual machine that hosts the OneAgent and sample application. 
+    * See the next section below for details
 
-# Quick start environment
-
-As you follow the Quick start, your environment will look as follows:
+# Environment topology
 
 1. **Virtual Machine** - to host the sample app
 1. **Sample application** - runs within a local Docker compose network. The application runs in a single container. A load generator container is also sending web requests continuously.  The Docker images have already been created and published to dockerhub
 1. **Sample application web interface** - viewable in a browser
 1. **Dynatrace OneAgent** - monitor host and the sample application
 1. **Dynatrace SaaS** - web interface with full-stack observability
-1. **Cloud Automation Control Plane (Powered by Keptn)** - Installed with a Dynatrace Keptn service that connects to the Dynatrace API
+1. **Cloud Automation Control Plane** - By default has the Dynatrace service that connects to the Dynatrace API
 1. **Cloud Automation web UI (a.k.a. Cloud Automation "bridge")** - to view workflow execution and SLO results
-1. **Keptn command line utility** - allows creating projects, onboarding services, and sending new artifact events to CloudAutomation.
+1. **Command line utility** - allows creating projects, onboarding services, and sending new artifact events to CloudAutomation.
 
 <img src="images/setup.png" width="75%" height="75%">
 
 # Quick start guide
 
-Follow the instructions for each step below in order.
+Follow the instructions for each step below in order shown.
 
 1. [Provision Virtual Machine with the OneAgent](VM.md)
 
@@ -59,12 +61,12 @@ Follow the instructions for each step below in order.
 
 # Resources
 
-### Documentation
+* [Dynatrace Cloud Automation Docs](https://www.dynatrace.com/support/help/how-to-use-dynatrace/cloud-automation)
+* [Keptn Website](https://keptn.sh)
+* [Keptn Dynatrace Service](https://github.com/keptn-contrib/dynatrace-service)
+* [Keptn community](https://keptn.sh/community)
 
-* Dynatrace  - https://www.dynatrace.com/support/help/how-to-use-dynatrace/cloud-automation
-* Keptn - https://keptn.sh 
-* Keptn community - https://keptn.sh/community/ 	
+# Example Webhooks
 
-### Support
-
-* For help or questions, email [Rob Jahn](https://www.linkedin.com/in/robjahn/) of the Dynatrace Tech Alliances team @ rob.jahn@dynatrace.com 
+* [Slack](https://artifacthub.io/packages/keptn/keptn-integrations/slack)
+* [GitHub Actions](https://artifacthub.io/packages/keptn/keptn-integrations/githubaction)

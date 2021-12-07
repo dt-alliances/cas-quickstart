@@ -55,15 +55,19 @@ cd ~/cas-quickstart/scripts
 
    <img src="images/bridge-project.png">
 
-## Step 4: Configure project upstream rep
+## Step 4: Configure project upstream repo
 
-On the new project, click on the URL to `Set the GIT upstream` repo. For this you will need to specify the Git remote url, the user and the token.  See below as reference.
+On the new project, click on the URL to `Set the GIT upstream` repo. For this you will need to specify the Git remote url, the user and the token.  See below as reference and refer the URL on that page the HELP docs for more details.
 
 <img src="images/git-upstream.png">
 
+💥💥💥 **IMPORTANT NOTE** 💥💥💥
+
+You must do this in order to view and edit the Cloud Automation project files.
+
 ## Step 5: Configure project with Dynatrace integration
 
-An API token is needed for by Dynatrace service to support SLO evaluations where Dynatrace is the data source.
+A Dynatrace API token is needed for by [Dynatrace service](https://github.com/keptn-contrib/dynatrace-service) to support SLO evaluations where Dynatrace is the data source.
 
 From the Cloud Automation UI, configure the Dynatrace URL and API token that you made earlier as a secret. The names MUST be as explained below.
 
@@ -71,7 +75,7 @@ From the Cloud Automation UI, configure the Dynatrace URL and API token that you
 1. the name MUST be `dynatrace`
 1. scope value of `dynatrace-secret`
 1. Add two Key-value pairs with these names
-    * `DT_TOKEN` = your Dynatrace URL like https://[YOUR-ENVIRONMENT-ID].sprint.dynatracelabs.com/"
+    * `DT_TOKEN` = your Dynatrace URL like https://[YOUR-ENVIRONMENT-ID].sprint.dynatracelabs.com"
     * `DT_API_TOKEN` = the Dynatrace token you made earlier
 
 The configured secret will look like this. 
