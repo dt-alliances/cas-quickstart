@@ -6,7 +6,14 @@ export OWNER=$1    # This is required for the dashboard monaco project
 if [ -z $OWNER ]; then
     echo "ABORT dashboard owner email is required argument"
     echo "      this must be a valid Dynatrace users email"
-    echo "syntax: ./setup-dynatrace-config.sh name@company.com"
+    echo "syntax: ./setup-dynatrace-config.sh your-email@company.com"
+    exit 1
+fi
+
+if [ "$OWNER" = "your-email@company.com" ]; then
+    echo "ABORT: You must YOUR dashboard owner email"
+    echo "      this must be a valid Dynatrace users email"
+    echo "syntax: ./setup-dynatrace-config.sh your-email@company.com"
     exit 1
 fi
 

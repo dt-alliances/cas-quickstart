@@ -36,11 +36,10 @@ create_project() {
   fi
 }
 
-
 echo "Creating demo project"
 KEPTN_PROJECT=demo
 KEPTN_SERVICE=casdemoapp
 KEPTN_STAGE=production
 KEPTN_SHIPYARD_FILE=keptn/shipyard.yaml
 DT_CONF_FILE=keptn/dynatrace.conf.yaml
-create_project $KEPTN_PROJECT $KEPTN_SERVICE $KEPTN_STAGE $KEPTN_SHIPYARD_FILE
+create_project $KEPTN_PROJECT $KEPTN_SERVICE $KEPTN_STAGE $KEPTN_SHIPYARD_FILE $DT_CONF_FILE

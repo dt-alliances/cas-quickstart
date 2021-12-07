@@ -14,7 +14,7 @@
       "tileType": "CUSTOM_CHARTING",
       "configured": true,
       "bounds": {
-        "top": 874,
+        "top": 798,
         "left": 760,
         "width": 380,
         "height": 228
@@ -49,8 +49,8 @@
       "tileType": "MARKDOWN",
       "configured": true,
       "bounds": {
-        "top": 114,
-        "left": 380,
+        "top": 38,
+        "left": 0,
         "width": 1140,
         "height": 38
       },
@@ -62,7 +62,7 @@
       "tileType": "CUSTOM_CHARTING",
       "configured": true,
       "bounds": {
-        "top": 418,
+        "top": 190,
         "left": 0,
         "width": 380,
         "height": 228
@@ -98,8 +98,8 @@
       "tileType": "CUSTOM_CHARTING",
       "configured": true,
       "bounds": {
-        "top": 646,
-        "left": 0,
+        "top": 190,
+        "left": 380,
         "width": 380,
         "height": 228
       },
@@ -134,8 +134,8 @@
       "tileType": "CUSTOM_CHARTING",
       "configured": true,
       "bounds": {
-        "top": 874,
-        "left": 0,
+        "top": 190,
+        "left": 760,
         "width": 380,
         "height": 228
       },
@@ -170,7 +170,7 @@
       "tileType": "MARKDOWN",
       "configured": true,
       "bounds": {
-        "top": 380,
+        "top": 152,
         "left": 0,
         "width": 380,
         "height": 38
@@ -183,21 +183,21 @@
       "tileType": "MARKDOWN",
       "configured": true,
       "bounds": {
-        "top": 380,
-        "left": 1140,
+        "top": 1064,
+        "left": 0,
         "width": 380,
         "height": 38
       },
       "tileFilter": {},
-      "markdown": "Host-based (SLI/SLO)"
+      "markdown": "Host Metrics (SLI/SLO)"
     },
     {
       "name": "Markdown",
       "tileType": "MARKDOWN",
       "configured": true,
       "bounds": {
-        "top": 380,
-        "left": 760,
+        "top": 760,
+        "left": 0,
         "width": 380,
         "height": 38
       },
@@ -209,8 +209,8 @@
       "tileType": "CUSTOM_CHARTING",
       "configured": true,
       "bounds": {
-        "top": 646,
-        "left": 760,
+        "top": 798,
+        "left": 380,
         "width": 380,
         "height": 228
       },
@@ -244,8 +244,8 @@
       "tileType": "CUSTOM_CHARTING",
       "configured": true,
       "bounds": {
-        "top": 418,
-        "left": 760,
+        "top": 798,
+        "left": 0,
         "width": 380,
         "height": 228
       },
@@ -279,21 +279,21 @@
       "tileType": "MARKDOWN",
       "configured": true,
       "bounds": {
-        "top": 380,
-        "left": 380,
+        "top": 456,
+        "left": 0,
         "width": 380,
         "height": 38
       },
       "tileFilter": {},
-      "markdown": "Service Errors & Throughput (SLI/SLO)"
+      "markdown": "Service Errors (SLI/SLO)"
     },
     {
       "name": "Custom chart",
       "tileType": "CUSTOM_CHARTING",
       "configured": true,
       "bounds": {
-        "top": 418,
-        "left": 380,
+        "top": 494,
+        "left": 0,
         "width": 380,
         "height": 228
       },
@@ -327,7 +327,7 @@
       "tileType": "CUSTOM_CHARTING",
       "configured": true,
       "bounds": {
-        "top": 646,
+        "top": 494,
         "left": 380,
         "width": 380,
         "height": 228
@@ -362,8 +362,8 @@
       "tileType": "CUSTOM_CHARTING",
       "configured": true,
       "bounds": {
-        "top": 418,
-        "left": 1140,
+        "top": 1102,
+        "left": 0,
         "width": 380,
         "height": 228
       },
@@ -397,8 +397,8 @@
       "tileType": "CUSTOM_CHARTING",
       "configured": true,
       "bounds": {
-        "top": 646,
-        "left": 1140,
+        "top": 1102,
+        "left": 380,
         "width": 380,
         "height": 228
       },
@@ -432,8 +432,8 @@
       "tileType": "CUSTOM_CHARTING",
       "configured": true,
       "bounds": {
-        "top": 874,
-        "left": 1140,
+        "top": 1102,
+        "left": 760,
         "width": 380,
         "height": 228
       },
@@ -467,8 +467,8 @@
       "tileType": "CUSTOM_CHARTING",
       "configured": true,
       "bounds": {
-        "top": 874,
-        "left": 380,
+        "top": 494,
+        "left": 760,
         "width": 380,
         "height": 228
       },
@@ -502,83 +502,52 @@
       "tileType": "MARKDOWN",
       "configured": true,
       "bounds": {
-        "top": 0,
-        "left": 0,
-        "width": 1520,
-        "height": 38
-      },
-      "tileFilter": {},
-      "markdown": "## Automated Release Validation based on Production SLOs, Dynatrace detected problems and leading indicators"
-    },
-    {
-      "name": "Service-level objective",
-      "tileType": "SLO",
-      "configured": true,
-      "bounds": {
-        "top": 152,
-        "left": 0,
-        "width": 380,
-        "height": 152
-      },
-      "tileFilter": {
-        "timeframe": "-1w"
-      },
-      "assignedEntities": [
-      ]
-    },
-    {
-      "name": "Problems",
-      "tileType": "OPEN_PROBLEMS",
-      "configured": true,
-      "bounds": {
-        "top": 152,
-        "left": 760,
-        "width": 152,
-        "height": 152
-      },
-      "tileFilter": {}
-    },
-    {
-      "name": "Markdown",
-      "tileType": "MARKDOWN",
-      "configured": true,
-      "bounds": {
-        "top": 342,
-        "left": 0,
-        "width": 1520,
-        "height": 38
-      },
-      "tileFilter": {},
-      "markdown": "**Additional important SLIs & SLOs to validate a healthy production deployment of your app**"
-    },
-    {
-      "name": "Markdown",
-      "tileType": "MARKDOWN",
-      "configured": true,
-      "bounds": {
         "top": 114,
         "left": 0,
+        "width": 1140,
+        "height": 38
+      },
+      "tileFilter": {},
+      "markdown": "## **SLI and evaluation criteria**"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 0,
+        "left": 0,
         "width": 380,
         "height": 38
       },
       "tileFilter": {},
-      "markdown": "**Release Validation Criteria:**"
+      "markdown": "## **Overall SLO Evalidation Criteria:**"
     },
     {
-      "name": "Service-level objective",
-      "tileType": "SLO",
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
       "configured": true,
       "bounds": {
-        "top": 152,
+        "top": 456,
+        "left": 760,
+        "width": 380,
+        "height": 38
+      },
+      "tileFilter": {},
+      "markdown": "Backend Calls (SLI/SLO)"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 456,
         "left": 380,
         "width": 380,
-        "height": 152
+        "height": 38
       },
-      "tileFilter": {
-        "timeframe": "-1w"
-      },
-      "assignedEntities": [
-      ]
+      "tileFilter": {},
+      "markdown": "Throughput (SLI/SLO)"
     }
   ]
 }

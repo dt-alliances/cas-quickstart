@@ -11,3 +11,6 @@ attachRules:
     - context: CONTEXTLESS
       key: keptn_service
       value: casdemoapp
+    - context: CONTEXTLESS
+      key: keptn_stage
+      value: production
