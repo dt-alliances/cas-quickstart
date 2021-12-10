@@ -22,7 +22,7 @@ The following items comprise your environment
 
 1. Dynatrace Accounts:
     * Dynatrace SaaS environment
-    * Cloud Automation Solution SaaS instance
+    * Cloud Automation SaaS instance
 1. Permissions:
     * You manage team members access using Dynatrace account settings. 
     * Cloud Automation uses the same SSO as Dynatrace, so you will use the same login for both  
