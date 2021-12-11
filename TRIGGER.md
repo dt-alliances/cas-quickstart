@@ -99,4 +99,4 @@ As reference:
 
 <hr>
 
-[<img src="images/prev.png" width="50px" height="50"/>](WEBHOOK.md) [<img src="images/next.png" width="50px" height="50"/>](README.md)
+[<img src="images/prev.png" width="50px" height="50"/>](WEBHOOK.md) [<img src="images/next.png" width="50px" height="50"/>](WEBHOOKMORE.md)

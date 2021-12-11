@@ -59,14 +59,11 @@ Follow the instructions for each step below in order shown.
 
 1. [Trigger a sequence](TRIGGER.md)
 
+1. [More webhook examples](WEBHOOKMORE.md)
+
 # Resources
 
 * [Dynatrace Cloud Automation Docs](https://www.dynatrace.com/support/help/how-to-use-dynatrace/cloud-automation)
 * [Keptn Website](https://keptn.sh)
 * [Keptn Dynatrace Service](https://github.com/keptn-contrib/dynatrace-service)
 * [Keptn community](https://keptn.sh/community)
-
-# Example Webhooks
-
-* [Slack](https://artifacthub.io/packages/keptn/keptn-integrations/slack)
-* [GitHub Actions](https://artifacthub.io/packages/keptn/keptn-integrations/githubaction)
