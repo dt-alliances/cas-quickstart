@@ -59,7 +59,7 @@ Follow the instructions for each step below in order shown.
 
 1. [Trigger a sequence](TRIGGER.md)
 
-1. [More webhook examples](WEBHOOKMORE.md)
+1. [Add automated SLO evaluation task](SLO.md)
 
 # Resources
 
