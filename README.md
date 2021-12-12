@@ -1,6 +1,14 @@
 # Overview
 
-The guide shows how to setup and use the [Dynatrace Cloud Automation](https://www.dynatrace.com/platform/cloud-automation/) control plane that provides an easy, event-based integration point for external tools such as testing services, notification services, and incident management services.
+The guide shows how to setup and use the [Dynatrace Cloud Automation](https://www.dynatrace.com/platform/cloud-automation/) that provides an easy, event-based integration point for external tools such as testing services, notification services, and incident management services. 
+
+The main goal of Dynatrace Cloud Automation is to enable Development, DevOps and SRE teams to build better quality software faster by bringing Observability, Orchestration, Automation, and Intelligence by:
+
+* Breaking the dependency between process and tooling
+* Using standards-based tool interoperability through Cloud Events and control plane
+* Having data driven, declarative orchestration without the need to write pipeline code
+* Supporting Declarative SLO and SLI specification based on SRE principles supporting and metric data source
+* Using GitOps based delivery and operational workflows based on Git
 
 This guide currently showcases webhook integrations, but the plan is to incorporate a Cloud Automation remote execution plane as to aide in the development and test of custom services.
 
