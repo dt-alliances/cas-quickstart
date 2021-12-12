@@ -97,6 +97,13 @@ As reference:
 * `status` expresses the task execution itself, meaning could the keptn service execute the task. Valid values are: `succeeded`, `errored`, `unknown`
 * `result` expresses is the result of the task being execution. Valid values are: `pass`, `warning`, `fail`
 
+# Additional webhooks to try
+
+If you want to tryout a few additional webhooks, then here are some more examples:
+
+* [Slack](https://artifacthub.io/packages/keptn/keptn-integrations/slack)
+* [GitHub Actions](https://artifacthub.io/packages/keptn/keptn-integrations/githubaction)
+
 <hr>
 
-[<img src="images/prev.png" width="50px" height="50"/>](WEBHOOK.md) [<img src="images/next.png" width="50px" height="50"/>](WEBHOOKMORE.md)
+[<img src="images/prev.png" width="50px" height="50"/>](WEBHOOK.md) [<img src="images/next.png" width="50px" height="50"/>](SLO.md)
