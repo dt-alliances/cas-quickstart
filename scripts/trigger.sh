@@ -67,7 +67,7 @@ do
             echo "Goto the Cloud Automation Bridge and confirm the sequence has completed"
             echo ""
             ;;
-        "3NOTUSED") 
+        "3xxxNOTUSED") 
             TEMPLATE_FILE="./events/mytask-silent-started.template"
             EVENT_FILE="./events/mytask-silent-started.json"
             KEPTN_CMD="keptn send event --file $EVENT_FILE"
@@ -88,7 +88,7 @@ do
             OUTPUT=$($KEPTN_CMD)
             echo "keptn send event output = $OUTPUT"
             ;;
-        "4NOTUSED") 
+        "4xxxNOTUSED") 
             TEMPLATE_FILE="./events/mytask-silent-finished.template"
             EVENT_FILE="./events/mytask-silent-finished.json"
             KEPTN_CMD="keptn send event --file $EVENT_FILE"
