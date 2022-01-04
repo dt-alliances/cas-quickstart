@@ -47,7 +47,7 @@ Copy the unique URL that is generated.
 1. Click the `Add subscription` button
 
 1. On the `New subscription` page, fill in the following values as shown below.
-    * task = `mytask-interative`
+    * task = `mytask-silent`
     * Task suffix = `finished`
     * request method = `POST`
     * URL = the wehbook.site URL you copied
