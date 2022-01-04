@@ -71,7 +71,14 @@ Follow the instructions for each step below in order shown.
 
 # Resources
 
-* [Dynatrace Cloud Automation Docs](https://www.dynatrace.com/support/help/how-to-use-dynatrace/cloud-automation)
+## Dynatrace Cloud Automation
+
+* [Dynatrace Docs](https://www.dynatrace.com/support/help/how-to-use-dynatrace/cloud-automation)
+* [Release Notes](https://www.dynatrace.com/support/help/shortlink/release-notes#cloud-automation)
+
+## Keptn
+
 * [Keptn Website](https://keptn.sh)
 * [Keptn Dynatrace Service](https://github.com/keptn-contrib/dynatrace-service)
 * [Keptn community](https://keptn.sh/community)
+* [Keptn Release Notes](https://github.com/keptn/keptn/releases)
