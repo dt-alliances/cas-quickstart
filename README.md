@@ -70,16 +70,20 @@ Refer to the picture below for the components that make you this guide.
 
 Follow the instructions for each step below in order shown.
 
-## Environment Setup
+## 1. Environment Setup
 
-1. [Provision Virtual Machine with the OneAgent](VM.md)
-1. [Setup Dynatrace monitoring configuration](SETUP.md)
-1. [Start the sample application](APP.md)
-1. [Onboard sample application to Cloud Automation](ONBOARD.md)
+* [Provision Virtual Machine with the OneAgent](VM.md)
+* [Setup Dynatrace monitoring configuration](SETUP.md)
+* [Start the sample application](APP.md)
+* [Onboard sample application to Cloud Automation](ONBOARD.md)
 
-## Use Cases
+## 2. Try out the quick start use cases
 
-1. [Webhooks](WEBHOOK.md)
+* [Webhooks](WEBHOOK.md)
+
+## 3. Build your own integration
+
+* [Webhooks](BUILDWEBHOOK.md)
 
 # Resources
 
