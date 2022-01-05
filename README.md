@@ -16,21 +16,25 @@ For help or questions, email [Rob Jahn](https://www.linkedin.com/in/robjahn/) of
 
 # Prerequisite knowledge
 
-Dynatrace
-* Understanding of Dynatrace, OneAgent and the Software Intelligence Platform
-* Understanding of Process Groups, Process Group Instances and Services
-* Know how to navigate the Dynatrace web interface to find Services, Release Overview, Dashboards
+### Dynatrace
 
-Cloud Automation Module
-* Understanding of Cloud Automation architecture and design concepts
+* [Dynatrace Platform Overview](https://www.dynatrace.com/support/help/get-started/)
+* [OneAgent](https://www.dynatrace.com/support/help/setup-and-configuration/dynatrace-oneagent)
+* [Services](https://www.dynatrace.com/support/help/how-to-use-dynatrace/transactions-and-services)
+* [Dynatrace web interface](https://www.dynatrace.com/support/help/get-started/navigation)
+
+### Cloud Automation architecture and design concepts
+
+* [Cloud Automation Overview Blog](https://www.dynatrace.com/news/blog/deliver-cloud-native-applications-faster-with-dynatrace-cloud-automation-module/)
+* [Overview video](https://www.youtube.com/watch?v=H4tZhpKxVC4)
 
 # Prerequisites
 
 The following items comprise your environment
 
 1. Dynatrace Accounts:
-    * Dynatrace SaaS environment
-    * Cloud Automation SaaS instance
+    * Dynatrace environment
+    * Dynatrace Cloud Automation instance
 1. Permissions:
     * You manage team members access using Dynatrace account settings. 
     * Cloud Automation uses the same SSO as Dynatrace, so you will use the same login for both  
@@ -38,36 +42,44 @@ The following items comprise your environment
     * You provide and manage a virtual machine that hosts the OneAgent and sample application. 
     * See the next section below for details
 
-# Environment topology
+# Dynatrace UI versus Cloud Automation UI
 
-1. **Virtual Machine** - to host the sample app
+There are two different web user interfaces that you need to have open for this guide.  Each has its one URL as shown below.
+* On the left is the **Dynatrace SaaS** - Used for the monitoring and dashboards for the demo application
+* On the right is the **Cloud Automation web UI (a.k.a. Cloud Automation "bridge")** - Used to view the Cloud Automation workflows called sequences and configuration of webhooks
+
+<img src="images/dt-and-bridge.png" width="75%" height="75%">
+
+# Demo Environment
+
+Refer to the picture below for the components that make you this guide.
+
+<img src="images/setup.png" width="75%" height="75%">
+
+1. **Virtual Machine** - hosts the demo app, OneAgent, and Keptn CLI 
 1. **Sample application** - runs within a local Docker compose network. The application runs in a single container. A load generator container is also sending web requests continuously.  The Docker images have already been created and published to dockerhub
 1. **Sample application web interface** - viewable in a browser
 1. **Dynatrace OneAgent** - monitor host and the sample application
-1. **Dynatrace SaaS** - web interface with full-stack observability
-1. **Cloud Automation Control Plane** - By default has the Dynatrace service that connects to the Dynatrace API
-1. **Cloud Automation web UI (a.k.a. Cloud Automation "bridge")** - to view workflow execution and SLO results
+1. **Dynatrace** - web interface with full-stack observability
+1. **Dynatrace Cloud Automation web UI** - Used to view the Cloud Automation workflows called sequences and configuration of webhooks
 1. **Command line utility** - allows creating projects, onboarding services, and sending new artifact events to CloudAutomation.
-
-<img src="images/setup.png" width="75%" height="75%">
+1. **Upstream Repo** - stores all the configuration files for the Cloud Automation demo application
+1. **webook.site** - used to quickly see the events that would be send to a downstream tool
 
 # Quick start guide
 
 Follow the instructions for each step below in order shown.
 
+## Environment Setup
+
 1. [Provision Virtual Machine with the OneAgent](VM.md)
-
 1. [Setup Dynatrace monitoring configuration](SETUP.md)
-
 1. [Start the sample application](APP.md)
-
 1. [Onboard sample application to Cloud Automation](ONBOARD.md)
 
-1. [Configure Cloud Automation Webhook subscription](WEBHOOK.md)
+## Use Cases
 
-1. [Trigger a sequence](TRIGGER.md)
-
-1. [Add automated SLO evaluation task](SLO.md)
+1. [Webhooks](WEBHOOK.md)
 
 # Resources
 
@@ -82,3 +94,4 @@ Follow the instructions for each step below in order shown.
 * [Keptn Dynatrace Service](https://github.com/keptn-contrib/dynatrace-service)
 * [Keptn community](https://keptn.sh/community)
 * [Keptn Release Notes](https://github.com/keptn/keptn/releases)
+

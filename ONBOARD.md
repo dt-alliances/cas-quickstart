@@ -1,10 +1,10 @@
 # Onboard sample application to Cloud Automation
 
-Follow these steps to configure (a.k.a. onboard) the sample app services within Cloud Automation project. 
+The [keptn CLI](https://keptn.sh/docs/0.10.x/reference/cli/) is a command line utility that creates projects, onboarding services, and add new artifact events with CloudAutomation Keptn module. Once the Keptn CLI in downloaded and authenticated, then scripts that call the CLI will automated the onboarding of the demo app within Cloud Automation project. 
+
+Once that is done, you will configure the demo project to connect to a new git repo that stores the project files and setup a Cloud Automation secret with your Dynatrace API token that will be used during SLO evaluations. 
 
 ## Step 1: Install and authenticate the Keptn CLI
-
-The [keptn CLI](https://keptn.sh/docs/0.10.x/reference/cli/) is a command line utility that creates projects, onboarding services, and add new artifact events with CloudAutomation Keptn module.
 
 In the SSH terminal, run these commands to install and authenticate the Keptn CLI
 
@@ -29,11 +29,17 @@ In the SSH terminal, run these commands to install and authenticate the Keptn CL
     Keptn cluster version: 0.10.0
     ```
 
+## Step 2: Get Credential and Authenticate the CLI
+
+1. Open Cloud Automation web UI.
+
+    <img src="images/bridge.png" width="70%" height="70%">
+
 1. Within your Cloud Automation web UI, click on the person icon on the top right to expand the `Get started` popup.  From the popup, use the `copy keptn auth command` button
 
-    <img src="images/bridge-tokens.png" width="30%" height="30%">
+    <img src="images/bridge-tokens.png" width="50%" height="50%">
 
-1. In the SSH terminal, authenticate the Keptn CLI by pasting the copied `keptn auth` command from the previous step.  You should see output similar to this:
+1. In the SSH terminal, authenticate the Keptn CLI by pasting the copied `keptn auth` command from the previous step.  The command you will paste and the output should be similar to this:
 
     ```
     keptn auth --endpoint=https://[YOUR-URL]/api --api-token=[YOUR_TOKEN]
@@ -57,33 +63,43 @@ cd ~/cas-quickstart/scripts
 
 ## Step 4: Configure project upstream repo
 
-On the new project, click on the URL to `Set the GIT upstream` repo. For this you will need to specify the Git remote url, the user and the token.  See below as reference and refer the URL on that page the HELP docs for more details.
-
-<img src="images/git-upstream.png">
+Here you need to create a public git based repository where the Cloud Automation files will be installed.
 
 💥💥💥 **IMPORTANT NOTE** 💥💥💥
 
+```
 You must do this in order to view and edit the Cloud Automation project files.
+```
+
+1. First setup your repo and access token per this [Repo Setup Documentation](https://keptn.sh/docs/0.10.x/manage/git_upstream/)
+
+1. Once you have your repo and token, on the Cloud Automation Web UI, click on the URL to `Set the GIT upstream` repo as shown below:
+
+    <img src="images/git-upstream.png">
+
+1. Once the configuration is saved, then verify your repo has been updated.  It should look as shown below:
+
+    <img src="images/git-repo.png" width="70%" height="70%">
 
 ## Step 5: Configure project with Dynatrace integration
 
-A Dynatrace API token is needed for by [Dynatrace service](https://github.com/keptn-contrib/dynatrace-service) to support SLO evaluations where Dynatrace is the data source.
-
-From the Cloud Automation UI, configure the Dynatrace URL and API token that you made earlier as a secret. The names MUST be as explained below.
-
-1. click `Add secret` button
-1. the name MUST be `dynatrace`
-1. scope value of `dynatrace-secret`
-1. Add two Key-value pairs with these names
-    * `DT_TENANT` = your Dynatrace URL like https://[YOUR-ENVIRONMENT-ID].sprint.dynatracelabs.com"
-        * Make sure no `\` at the end
-        * Make sure this is the Dynatrace URL and NOT the Cloud Automation URL
-    * `DT_API_TOKEN` = the Dynatrace token you made earlier
-
-The configured secret will look like this. 
+A Dynatrace API token is needed for by [Dynatrace service](https://github.com/keptn-contrib/dynatrace-service) to support SLO evaluations where Dynatrace is the data source. The configured secret must look like this. 
 
 <img src="images/dynatrace-secret.png" width="70%" height="70%">
 
+From the Cloud Automation UI, configure the Dynatrace secret by following these steps:
+
+1. Click on the `demo` project
+1. Choose the `Uniform` menu option on the left side and then the `secrets` page
+1. Click `Add secret` button
+    * Name MUST be `dynatrace`
+    * Scope value of `dynatrace-secret`
+    * Add two Key-value pairs with these names
+        * `DT_TENANT` = your Dynatrace URL like "https://[YOUR-ENVIRONMENT-ID].sprint.dynatracelabs.com"
+            * Make sure no `\` at the end
+            * Make sure this is the Dynatrace URL and NOT the Cloud Automation URL
+        * `DT_API_TOKEN` = Make sure this is the Dynatrace API token and NOT the Cloud Automation Token NOR the Dynatrace OneAgent installation token 
+
 <hr>
 
-[<img src="images/prev.png" width="50px" height="50"/>](SETUP.md) [<img src="images/next.png" width="50px" height="50"/>](WEBHOOK.md)
+[<img src="images/prev.png" width="50px" height="50"/>](APP.md) [<img src="images/next.png" width="50px" height="50"/>](WEBHOOK.md)

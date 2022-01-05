@@ -6,7 +6,10 @@ Follow these steps to automate the setup the Dynatrace monitoring configuration
 
 A Dynatrace API token is needed for by Dynatrace service to support SLO evaluations where Dynatrace is the data source. To add your token:
 
-1. Within Dynatrace, using the left side menu click on `Manage --> Access tokens`. 
+1. Open the Dynatrace web UI and within Dynatrace, using the left side menu click on `Manage --> Access tokens`.
+
+    <img src="images/dynatrace.png" width="70%" height="70%">
+ 
 1. Click `Generate new token` button
 1. Given the token a name and add these scopes:
     * Access problem and event feed, metrics, and topology (API v1)
@@ -15,12 +18,18 @@ A Dynatrace API token is needed for by Dynatrace service to support SLO evaluati
     * Write configuration (API v1)
     * Capture request data (API v1)
     * Data ingest, e.g.: metrics and events (API v1)
+    * Ingest events (API v2)
     * Read metrics (API v2)
     * Ingest metrics (API v2)
     * Read entities (API v2)
     * Read problems (API v2)
     * Write problems (API v2)
-1. Save your token to a safe place, for you only get to see it once
+
+💥💥💥 **IMPORTANT NOTE** 💥💥💥
+
+```
+Save your token to a safe place, for you only get to see it once and you need it later during the setup.
+```
 
 ## Step 2: Download and install monaco
 
@@ -86,17 +95,19 @@ A custom script called `setup-dynatrace-config.sh` is used to call both monaco a
     -----------------------------------------------------------------------------------
     ```
 
+    The script adds the following Dynatrace configuration:
+    * Set global [Frequent Issue Detection](https://www.dynatrace.com/support/help/how-to-use-dynatrace/problem-detection-and-analysis/problem-detection/detection-of-frequent-issues/) settings to Off to make testing of problems easier
+    * Adjust the [Service Anomaly Detection](https://www.dynatrace.com/support/help/how-to-use-dynatrace/problem-detection-and-analysis/problem-detection/adjust-sensitivity-anomaly-detection/) to make testing of problems easier
+    * Add [Auto Tagging Rules](https://www.dynatrace.com/support/help/how-to-use-dynatrace/tags-and-metadata/) to drive service tags for the demo application
+    * Add a custom [dashboard](https://www.dynatrace.com/support/help/how-to-use-dynatrace/dashboards-and-charts/) that will be used during SLO automated evaluation
+
 ## Step 4: Verify Dynatrace Configuration
 
-The script adds the following Dynatrace configuration:
+For a quick confirmation, verify the custom SLO dashboard was added.
 
-These can be viewed within the settings:
-* Set global [Frequent Issue Detection](https://www.dynatrace.com/support/help/how-to-use-dynatrace/problem-detection-and-analysis/problem-detection/detection-of-frequent-issues/) settings to Off to make testing of problems easier
-* Adjust the [Service Anomaly Detection](https://www.dynatrace.com/support/help/how-to-use-dynatrace/problem-detection-and-analysis/problem-detection/adjust-sensitivity-anomaly-detection/) to make testing of problems easier
-* Add [Auto Tagging Rules](https://www.dynatrace.com/support/help/how-to-use-dynatrace/tags-and-metadata/) to drive service tags for the default keptn services
-
-These can be viewed in the dashboard page:
-* Add a custom [dashboard](https://www.dynatrace.com/support/help/how-to-use-dynatrace/dashboards-and-charts/) that will be used during SLO automated evaluation
+1. Using the left side menu click on `Observe and explore --> Dashboards`.
+1. Open the one called: `KQG;project=demo;stage=production;service=casdemoapp`.  It should look like this:
+    <img src="images/dynatrace-dashboard.png" width="70%" height="70%">
 
 <hr>
 

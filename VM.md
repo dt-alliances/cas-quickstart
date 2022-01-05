@@ -101,7 +101,9 @@ To install the [Dynatrace OneAgent](https://www.dynatrace.com/support/help/setup
 
 ## Step 3: Verify Dynatrace monitoring of sample application
 
-In Dynatrace, navigate to `Hosts` menu on the bottom left side to review the host list. You should see your host.
+In Dynatrace, navigate to `Hosts` menu on the bottom left side to review the host list. You should see your host. It should look like this:
+
+<img src="images/host.png" width="70%" height="70%">
 
 <hr>
 
