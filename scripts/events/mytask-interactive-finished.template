@@ -2,15 +2,10 @@
   "data": {
     "project":"demo",
     "stage":"production",
-    "service":"casdemoapp",
+    "service": "casdemoapp",
     "status": "succeeded",
     "result": "pass", 
-    "custom":"this is custom data",
-    "custom1":"this is custom1 data",
-    "mytask-interactive": {
-      "link": "https://a-back-link-to-result",
-      "more": "even more data"
-    }
+    "custom":"this is more custom data"
   },
   "source": "cas-quickstart",
   "specversion": "1.0",
