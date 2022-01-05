@@ -38,19 +38,20 @@ do
             echo "Saving Keptn context ID to $SEQUENCE_FILE"
             echo $ID > $SEQUENCE_FILE
             echo ""
-            echo "Goto the Cloud Automation Bridge and review the new sequence"
-            echo "Expand the payload for the 'webhook-service started' for mytask-interactive"
-            echo "And copy the 'triggeredid' value"
+            echo "Goto the Cloud Automation web UI and review the new sequence"
             echo ""
             ;;
         "2") 
             TEMPLATE_FILE="./events/mytask-interactive-finished.template"
             EVENT_FILE="./events/mytask-interactive-finished.json"
             KEPTN_CMD="keptn send event --file $EVENT_FILE"
-            echo "Running '$KEPTN_CMD'"
 
             ID=$(cat $SEQUENCE_FILE)
             if [ -z $TRIGGER_ID ]; then
+                echo "Open the Cloud Automation web UI to the running sequence"
+                echo "Expand the mytask-interactive task and view the started event payload"
+                echo "To get the triggeredid"
+                echo ""
                 read -p "Enter triggeredid value : " TRIGGER_ID;
             fi
             if [ -z $TRIGGER_ID ]; then
@@ -61,13 +62,15 @@ do
                 sed 's~REPLACE_ID~'"$ID"'~' | \
                 sed 's~REPLACE_TRIGGER_ID~'"$TRIGGER_ID"'~' > $EVENT_FILE
             
+            echo ""
+            echo "Running '$KEPTN_CMD'"
             OUTPUT=$($KEPTN_CMD)
             echo "keptn send event output = $OUTPUT"
             echo ""
-            echo "Goto the Cloud Automation Bridge and confirm the sequence has completed"
+            echo "Goto the Cloud Automation web UI and confirm the sequence has completed"
             echo ""
             ;;
-        "3xxxNOTUSED") 
+        "SKIP-3") 
             TEMPLATE_FILE="./events/mytask-silent-started.template"
             EVENT_FILE="./events/mytask-silent-started.json"
             KEPTN_CMD="keptn send event --file $EVENT_FILE"
@@ -88,7 +91,7 @@ do
             OUTPUT=$($KEPTN_CMD)
             echo "keptn send event output = $OUTPUT"
             ;;
-        "4xxxNOTUSED") 
+        "SKIP-4") 
             TEMPLATE_FILE="./events/mytask-silent-finished.template"
             EVENT_FILE="./events/mytask-silent-finished.json"
             KEPTN_CMD="keptn send event --file $EVENT_FILE"
