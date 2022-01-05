@@ -32,7 +32,8 @@ create_project() {
     echo "Skipping adding dynatrace.conf.yaml"
   else
     echo "Adding dynatrace.conf.yaml config used for Dynatrace dashboard query of SLOs"
-    keptn add-resource --project=$KEPTN_PROJECT --stage=$KEPTN_STAGE --service=$KEPTN_SERVICE --resource=$DT_CONF_FILE --resourceUri=dynatrace/dynatrace.conf.yaml
+    keptn add-resource --project=$KEPTN_PROJECT --resource=$DT_CONF_FILE --resourceUri=dynatrace/dynatrace.conf.yaml
+    #keptn add-resource --project=$KEPTN_PROJECT --stage=$KEPTN_STAGE --service=$KEPTN_SERVICE --resource=$DT_CONF_FILE --resourceUri=dynatrace/dynatrace.conf.yaml
   fi
 }
 
