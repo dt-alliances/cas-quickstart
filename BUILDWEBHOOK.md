@@ -4,7 +4,7 @@ Now that you have seen and executed both types of webhook modes, its time to def
 
 ## Webhook Task Ideas
 
-| Task Category | Silent Webhook | Integrate Webhook |
+| Task Category | Silent Webhook | Interactive Webhook |
 |---------------|----------------|--------------------|
 | Chaos Testing |  Trigger a Test to start  |  Trigger and send back results of test |
 |               |  Trigger a Test to stop   |  Trigger and send back confirmation it stopped |
@@ -33,7 +33,7 @@ Now that you have seen and executed both types of webhook modes, its time to def
     * use customer definable scripts
     * Predefined templates
 1. Interactive pattern is possible, determine how user manages the the Cloud Automation URL and Token as secrets
-1. Define one more more tasks and their use cases
+1. Define one more tasks and their use cases
 1. For each use case, review the interfaces HTTP method, headers, auth credentials, and payload requirements and determine if Cloud Automation webhook will support it
 1. Setup a downstream platform account to use for development
 1. Setup and test webhooks to the downstream platform
