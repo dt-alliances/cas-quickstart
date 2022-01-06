@@ -8,21 +8,21 @@ Before you start, I encourage you to review these resources:
 
 # Use Case Overview
 
-There are two webhook types that you will setup and review for this guide
+There are two webhook types that you will setup and review for this guide.
 
 ## #1 Silent webhook
 
-For this use case you will start with the builtin task called `evaluation` that performs an automated SLO evaluation. Your webhook will subscribe to the `evaluation.finished` event as to get the results.
+For this use case, you will start with the builtin task called `evaluation` that performs an automated SLO evaluation. Your webhook will subscribe to the `evaluation.finished` event as to get the results.
 
-The picture below shows silent mode activation mode:
+The picture below shows the silent webhook activation mode:
 
 <img src="images/webhook-silent.png" width="50%" height="50%">
 
 ## #2 Interactive webhook
 
-For this use case you will simulate what a downstream system does by trigging a custom task and having that task send back with a `mytask-interactive.finished` event in order for the sequence to continue.  This custom task does nothing, but allows you to understand how to run the interactive model as to help you setup your custom integration.
+For this use case, you will simulate what a downstream system does by triggering a custom task and having that task send back with a `mytask-interactive.finished` event in order for the sequence to continue.  This custom task does nothing, but allows you to understand how to run the interactive model as to help you setup your custom integration.
 
-The picture below shows interactive mode activation mode:
+The picture below shows the interactive webhook activation mode:
 
 <img src="images/webhook-interative.png" width="50%" height="50%">
 
@@ -30,19 +30,19 @@ See [Dynatrace Docs](https://www.dynatrace.com/support/help/how-to-use-dynatrace
 
 # Webhook.site
 
-You will configure both types of webhooks to send the HTTP request and payload to a web site, https://webhook.site, in order to quickly see the events that would be send to a downstream tool. 
+You will configure both types of webhooks to send the HTTP request and payload to this web site `https://webhook.site` This is a quick way to see the events that would be send to a downstream tool. 
 
-To get you unique webhook target, just open `https://webhook.site` page in a new browser tab and keep it open and use the copy to clipboard button
+To get you unique webhook URL, just open https://webhook.site in a new browser tab.  Keep this tab open while using this guide. You can use the copy to clipboard button to get your unique URL that you will configure later in the guide as part of the webhooks configuration.
 
 <img src="images/webhook-site-copy-url.png" width="75%" height="75%"> 
 
-Once you setup the webhook subscriptions, you will trigger a sequence and view the webhook payloads in the https://webhook.site as shown below.
+Later in the guide once you setup the webhook subscriptions, you will trigger a sequence and view the webhook payloads in the https://webhook.site as shown below.
 
 <img src="images/mysequence-flow.png" width="75%" height="75%">
 
 # Trigger a sequence script
 
-To make is easy to control the sequences, a script called `scripts/trigger.sh` will send in the various Cloud Automation events using event templates found in the `scripts/events/` subfolder.  You will run this script from the SSH shell when directed to as part of the use cases.
+A UI enhancement is coming, but for now you need to make an API call or use the Keptn CLI to trigger a sequence to run.  To make this task easier, the `scripts/trigger.sh` script in this repo will send in the various Cloud Automation events using the Keptn CLI and JSON event templates found in the `scripts/events/` subfolder.  You will run this script from the SSH shell when directed to as part of the use cases.
 
 <hr>
 
