@@ -1,6 +1,6 @@
 # Overview
 
-The guide shows how to setup and use the [Dynatrace Cloud Automation](https://www.dynatrace.com/platform/cloud-automation/) that provides an easy, event-based integration point for external tools such as testing services, notification services, and incident management services. 
+The guide shows how to setup and use the [Dynatrace Cloud Automation](https://www.dynatrace.com/platform/cloud-automation/) that provides an easy, event-based integration platform for external tools such as testing services, notification services, and incident management services. 
 
 The main goal of Dynatrace Cloud Automation is to enable Development, DevOps and SRE teams to build better quality software faster by bringing Observability, Orchestration, Automation, and Intelligence by:
 
@@ -10,7 +10,7 @@ The main goal of Dynatrace Cloud Automation is to enable Development, DevOps and
 * Supporting Declarative SLO and SLI specification based on SRE principles supporting and metric data source
 * Using GitOps based delivery and operational workflows based on Git
 
-This guide currently showcases webhook integrations, but the plan is to incorporate a Cloud Automation remote execution plane as to aide in the development and test of custom services.
+This guide currently showcases webhook integrations, but the plan is to incorporate a Cloud Automation remote execution plane as to aide in the development and test of custom Cloud Automation services.
 
 For help or questions, email [Rob Jahn](https://www.linkedin.com/in/robjahn/) of the Dynatrace Tech Alliances team @ rob.jahn@dynatrace.com 
 
@@ -37,27 +37,27 @@ The following items comprise your environment
     * Dynatrace Cloud Automation instance
 1. Permissions:
     * You manage team members access using Dynatrace account settings. 
-    * Cloud Automation uses the same SSO as Dynatrace, so you will use the same login for both  
+    * Cloud Automation uses the same SSO as Dynatrace, so you will use the same login for this  
 1. Compute
     * You provide and manage a virtual machine that hosts the OneAgent and sample application. 
     * See the next section below for details
 
 # Dynatrace UI versus Cloud Automation UI
 
-There are two different web user interfaces that you need to have open for this guide.  Each has its one URL as shown below.
-* On the left is the **Dynatrace SaaS** - Used for the monitoring and dashboards for the demo application
-* On the right is the **Cloud Automation web UI (a.k.a. Cloud Automation "bridge")** - Used to view the Cloud Automation workflows called sequences and configuration of webhooks
+There are two different web user interfaces that you need to have open for this guide.  Each has its own URL as shown below.
+* On the left is the **Dynatrace SaaS** - Used for monitoring of the demo application
+* On the right is the **Cloud Automation web UI (a.k.a. Cloud Automation "bridge")** - Used to view the Cloud Automation workflows, called sequences, and configuration of webhooks
 
 <img src="images/dt-and-bridge.png" width="75%" height="75%">
 
 # Demo Environment
 
-Refer to the picture below for the components that make you this guide.
+Refer to the picture below for the components that make up this guide.
 
 <img src="images/setup.png" width="75%" height="75%">
 
 1. **Virtual Machine** - hosts the demo app, OneAgent, and Keptn CLI 
-1. **Sample application** - runs within a local Docker compose network. The application runs in a single container. A load generator container is also sending web requests continuously.  The Docker images have already been created and published to dockerhub
+1. **Sample application** - runs within a local Docker compose network. The application runs in a single container. A load generator container is also sending web requests continuously.  The Docker images have already been created and published to Dockerhub
 1. **Sample application web interface** - viewable in a browser
 1. **Dynatrace OneAgent** - monitor host and the sample application
 1. **Dynatrace** - web interface with full-stack observability
@@ -68,7 +68,7 @@ Refer to the picture below for the components that make you this guide.
 
 # Quick start guide
 
-Follow the instructions for each step below in order shown.
+Follow the instructions for each step below in order.
 
 ## 1. Environment Setup
 
