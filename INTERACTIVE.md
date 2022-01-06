@@ -1,6 +1,6 @@
 # Webhook using interactive mode activation of a custom task  
 
-For this use case you will simulate what a downstream system does by trigging a custom task and having that task send back with a `mytask-interactive.finished` event in order for the sequence to continue.  This custom task does nothing, but allows you to understand how to run the interactive model as to help you setup your custom integration.
+For this use case you will simulate what a downstream system does by triggering a custom task and having that task send back with a `mytask-interactive.finished` event in order for the sequence to continue.  This custom task does nothing, but allows you to understand how to run the interactive model as to help you setup your custom integration.
 
 ## Step 1: Configure the webhook
 
@@ -26,15 +26,15 @@ For this use case you will simulate what a downstream system does by trigging a 
 
 ## Step 2: Review
 
-The webhooks should look like this
+The new webhook should look like this
 
 <img src="images/webhook-int-list.png" width="75%" height="75%">
 
 ## Step 3: Adjust the webhook configuration in GIT
 
-A UI enhancement is coming, but for now you need to manually adjust the webhook.yaml for the webhook as to tell Cloud Automation web service to wait for the task to send back finished status.  
+A UI enhancement is coming, but for now you need to manually adjust the `webhook.yaml` to tell Cloud Automation web service to wait for the custom task to send back finished status.  
 
-1. Open up the project in your git upstream repo and adjust the `webhook.yaml` file in the `master` branch 
+1. Open up the project in your git upstream repo and adjust the `webhook/webhook.yaml` file in the `master` branch 
 
 1. Find the `sh.keptn.event.mytask-interactive.triggered` entry and add the `sendFinished: false` row as shown below between `type` and `requests`
 
@@ -63,7 +63,7 @@ Once you edit the webhook file in GIT, you should not edit the webhook in the We
 
 ## Step 4: Adjust the shipyard configuration in GIT
 
-A UI enhancement is coming, but for now you need to manually adjust the shipyard.yaml to adjust the sequence tasks.
+A UI enhancement is coming, but for now you need to manually adjust the `shipyard.yaml` to adjust the sequence tasks.
 
 1. Open up the project in your git upstream repo and adjust the `shipyard.yaml` file in the `master` branch 
 
@@ -85,6 +85,7 @@ A UI enhancement is coming, but for now you need to manually adjust the shipyard
               properties:
                 timeframe: "5m"
     ```
+
 1. Commit your change
 
 ## Step 5: Trigger sequence
@@ -111,7 +112,7 @@ A UI enhancement is coming, but for now you need to manually adjust the shipyard
     OUTPUT = ID of Keptn context: 409d7b25-d04b-44f3-a636-d2fc8d67819a
     ```
 
-1. Review the bridge pick the `demo` project and `sequence` menu to view the sequence in a started state.  If you expand the `mytask-interactive` of the sequence you can see that the task events contain the unique `triggeredid` for the task as shown below. 
+1. Review the bridge pick the `demo` project and `sequence` menu to view the sequence in a started state.  If you expand the `mytask-interactive` of the sequence, you can see that the task events contain the unique `triggeredid` for the task as shown below. You will need this `triggeredid` later to finish the task. 
 
     <img src="images/mysequence-started.png">
 
@@ -127,7 +128,7 @@ A UI enhancement is coming, but for now you need to manually adjust the shipyard
 
 ## Step 6: Indicate the mytask-interactive is finished
 
-Since you setup an interactive webhook, you must send back a `mytask-interactive.finished` event to indicate the task is finished and pass back the unique trigger id.
+Since you setup an interactive webhook, you must send back a `mytask-interactive.finished` event to indicate the task is finished. This event must include unique `triggeredid` shown earlier.
 
 1. In the SSH terminal, run the `./trigger.sh` command again and pick option `2`
 
@@ -144,7 +145,7 @@ Since you setup an interactive webhook, you must send back a `mytask-interactive
     Enter triggeredid value :
     ```
 
-1. At the `Enter triggeredid value` prompt, paste the `triggeredid` value taken from the `mytask-interactive.started` payload. If you expand the `mytask-interactive` of the sequence you can see that the task events contain the unique `triggeredid` for the task as shown below. 
+1. At the `Enter triggeredid value` prompt, paste the `triggeredid` value taken from the `mytask-interactive.started` payload. If you expand the `mytask-interactive` of the sequence, you can see that the task events contain the unique `triggeredid` for the task as shown below. 
 
     <img src="images/mysequence-started.png">
 
@@ -157,23 +158,11 @@ Since you setup an interactive webhook, you must send back a `mytask-interactive
     Goto the Cloud Automation Bridge and confirm the sequence has completed
     ```
 
-1. Back in the bridge, review the sequence.  The `mytask-interactive` should be complete and the whole sequence should be complete too since there was only one task.
+1. Back in the bridge, review the sequence.  The `mytask-interactive` should be complete and the whole sequence should be complete too.
 
     <img src="images/mysequence-complete.png" width="50%" height="50%">
 
-## Step 3: Review Webhook.site
-
-In the webhook.site to view the generated finished event. It will look like this and is the result of the webhook subscription that you created earlier.
-
-<img src="images/webhook-interative-event.png" width="50%" height="50%">
-
-💥💥💥 **IMPORTANT NOTE** 💥💥💥
-
-```
-The event see in the webhook.site is what would be send to any down stream tool.  So the payload that was send should be customized to drive the expected format with the data required to drive any logic.
-```
-
-## Step 4: Experiment with different status values
+## Step 3: Experiment with different status values
 
 To see how different values of the `status` and `result` get displayed in the bridge, you can adjust the events file used by the `trigger.sh` script.  
 
