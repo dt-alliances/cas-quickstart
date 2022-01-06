@@ -1,6 +1,6 @@
 # Build your own webhook
 
-Now that you have seen and executed both types of webhook modes, its time to define your own.  Below is a table of some of the possibilities.  But keep in mind a task will be part of sequences, do they can be reusable to different use cases like testing or problem management.
+Now that you have seen and executed both types of webhooks, its time to define your own.  Below is a table of some of the possibilities.  But keep in mind a task will be part of sequences, so they can be reusable to different use cases like testing or problem management.
 
 ## Webhook Task Ideas
 
@@ -28,15 +28,17 @@ Now that you have seen and executed both types of webhook modes, its time to def
 
 # Suggested Recipe
 
-1. Determine the best interface of the downstream platform to configure a Cloud Automation webhook against. For example Configurable an inbound webhook or API. If yes, then a Cloud Automation silent or interactive pattern is possible.
-1. Determine if the downstream platform supports the ability to make the Cloud Automation API call to send back a tasks finished event. If yes, then a Cloud Automation interactive pattern is possible. For example:
+1. Determine the best interface of the downstream platform to configure a Cloud Automation webhook against. For example, a configurable an inbound webhook or an API. If yes, then a Cloud Automation silent or interactive pattern is possible.
+1. Determine if the downstream platform supports the ability to make the Cloud Automation API call to send back a tasks finished event. If yes, then a Cloud Automation interactive pattern is possible. For example, this could be implemented as:
     * use customer definable scripts
     * Predefined templates
-1. Interactive pattern is possible, determine how user manages the the Cloud Automation URL and Token as secrets
-1. Define one more tasks and their use cases
-1. For each use case, review the interfaces HTTP method, headers, auth credentials, and payload requirements and determine if Cloud Automation webhook will support it
-1. Setup a downstream platform account to use for development
-1. Setup and test webhooks to the downstream platform
+    * This is one example for reference: https://artifacthub.io/packages/keptn/keptn-integrations/githubaction
+1. If the interactive pattern is possible, also determine how a user would manage the the Cloud Automation URL and Token as secrets
+1. Define one or more use cases
+1. For each use case, review the interfaces HTTP method, headers, auth credentials, and payload requirements and map to how the Cloud Automation webhook would be configured
+1. Setup a downstream platform account to use for development and testing
+1. If creating an interactive use case, develop the script or template that will process the webhook and send back the event to the Cloud Automation API
+1. Setup and test Cloud Automation webhooks to the downstream platform.
     * Delete the existing webhooks from the demos
     * Configure configure webhooks to the downstream platform API or webhooks
     * Reuse the the sequences and the `trigger.sh` script from this quick start guide to some initial tests
