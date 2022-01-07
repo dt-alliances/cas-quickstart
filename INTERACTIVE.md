@@ -176,5 +176,5 @@ As reference:
 
 <hr>
 
-[<img src="images/prev.png" width="50px" height="50"/>](SLO.md) [<img src="images/next.png" width="50px" height="50"/>](BUILDWEBHOOK.md)
+[<img src="images/prev.png" width="50px" height="50"/>](SILENT.md) [<img src="images/next.png" width="50px" height="50"/>](BUILDWEBHOOK.md)
 
