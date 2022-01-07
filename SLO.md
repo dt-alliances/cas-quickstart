@@ -94,7 +94,7 @@ The webhooks should look like this
 
 ## Step 6: Review SLO evaluation
 
-Monitor the sequence progress in the Cloud Automation UI.  Once the sequence is complete, you can click on the icon within the sequence to open up the results page as shown below.
+Monitor the sequence progress in the Cloud Automation UI.  Once the sequence is complete, you can click on the icon within the sequence to open up the results page.  If the SLO evaluation because of a low calculated score goes not pass (as shown below), that OK.  
 
 <img src="images/evaluation-sequence.png">
 
@@ -118,4 +118,4 @@ You can read more too on the Quality Gate page within the [Keptn docs](https://k
 
 <hr>
 
-[<img src="images/prev.png" width="50px" height="50"/>](WEBHOOK.md) [<img src="images/next.png" width="50px" height="50"/>](INTERACTIVE.md)
+[<img src="images/prev.png" width="50px" height="50"/>](WEBHOOK.md) [<img src="images/next.png" width="50px" height="50"/>](SILENT.md)

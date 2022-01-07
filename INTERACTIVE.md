@@ -1,8 +1,37 @@
-# Webhook using interactive mode activation of a custom task  
+# Interactive webhook for a custom task  
 
-For this use case you will simulate what a downstream system does by triggering a custom task and having that task send back with a `mytask-interactive.finished` event in order for the sequence to continue.  This custom task does nothing, but allows you to understand how to run the interactive model as to help you setup your custom integration.
+For this use case you will simulate what a downstream system does by triggering a custom task and then manually sending back the `mytask-interactive.finished` event to Cloud Automation in order for the sequence to continue.  For this, you will need to capture and send back the `triggeredid` as to complete the processing. 
 
-## Step 1: Configure the webhook
+This custom task, `mytask-interactive`, does nothing but allows you to understand how to run the interactive model as to help you setup your custom integration.
+
+## Step 1: Adjust the shipyard configuration in git
+
+The UI enhancement is coming, but for now you need to manually adjust the `shipyard.yaml` to adjust the sequence tasks.
+
+1. Open up the project in your git upstream repo and adjust the `shipyard.yaml` file in the `master` branch 
+
+1. Add the `mytask-interactive` task as the first task as shown below.  You can keep the `evaluation` task.
+
+    ```
+    apiVersion: spec.keptn.sh/0.2.2
+    kind: "Shipyard"
+    metadata:
+      name: "demo-webhook"
+    spec:
+      stages:
+        - name: "production"
+          sequences:
+          - name: "mysequence"
+            tasks: 
+            - name: "mytask-interactive"  <<------------------- **** ADD THIS ROW ****
+            - name: "evaluation"
+              properties:
+                timeframe: "5m"
+    ```
+
+1. Commit your change
+
+## Step 2: Configure the webhook
 
 1. Click the `Add subscription` button
 
@@ -24,15 +53,15 @@ For this use case you will simulate what a downstream system does by triggering 
 
 1. Click the `Create subscription` button
 
-## Step 2: Review
+## Step 3: Review
 
 The new webhook should look like this
 
 <img src="images/webhook-int-list.png" width="75%" height="75%">
 
-## Step 3: Adjust the webhook configuration in GIT
+## Step 4: Adjust the webhook configuration in git
 
-A UI enhancement is coming, but for now you need to manually adjust the `webhook.yaml` to tell Cloud Automation web service to wait for the custom task to send back finished status.  
+The UI enhancement is coming, but for now you need to manually adjust the `webhook.yaml` to tell Cloud Automation web service to wait for the custom task to send back finished status.  
 
 1. Open up the project in your git upstream repo and adjust the `webhook/webhook.yaml` file in the `master` branch 
 
@@ -60,33 +89,6 @@ A UI enhancement is coming, but for now you need to manually adjust the `webhook
 ```
 Once you edit the webhook file in GIT, you should not edit the webhook in the Web UI else the `sendFinished` setting will need to be manually re-added back.
 ```
-
-## Step 4: Adjust the shipyard configuration in GIT
-
-A UI enhancement is coming, but for now you need to manually adjust the `shipyard.yaml` to adjust the sequence tasks.
-
-1. Open up the project in your git upstream repo and adjust the `shipyard.yaml` file in the `master` branch 
-
-1. Add the `mytask-interactive` task as the first task as shown below
-
-    ```
-    apiVersion: spec.keptn.sh/0.2.2
-    kind: "Shipyard"
-    metadata:
-      name: "demo-webhook"
-    spec:
-      stages:
-        - name: "production"
-          sequences:
-          - name: "mysequence"
-            tasks: 
-            - name: "mytask-interactive"  <<------------------- **** ADD THIS ROW ****
-            - name: "evaluation"
-              properties:
-                timeframe: "5m"
-    ```
-
-1. Commit your change
 
 ## Step 5: Trigger sequence
 
