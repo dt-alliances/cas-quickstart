@@ -66,6 +66,10 @@ Refer to the picture below for the components that make up this guide.
 1. **Upstream Repo** - stores all the configuration files for the Cloud Automation demo application
 1. **webook.site** - used to quickly see the events that would be send to a downstream tool
 
+# Invite others to collaborate
+
+Follow [these instructions](USERADMIN.md) for adding users.
+
 # Quick start guide
 
 Follow the instructions for each step below in order.
