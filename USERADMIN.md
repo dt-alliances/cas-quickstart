@@ -16,6 +16,6 @@ On the Invite User Page:
 
 <img src="images/admin-2.png" width="75%" height="75%">
 
-The new user will get an automation email to establish their password.  If that already have access to a Dynatrace environment within your account, they can get navigate to the the the Dynatrace or Cloud Automation URL. 
+The new user will get an automated email to establish their password.  If that already have access to a Dynatrace environment within your account, they can get navigate to the the the Dynatrace or Cloud Automation URL. 
 
 Refer to the [Dynatrace Docs](https://www.dynatrace.com/support/help/how-to-use-dynatrace/user-management-and-sso/manage-groups-and-permissions) for more details.
