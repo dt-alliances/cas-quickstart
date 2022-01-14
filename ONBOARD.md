@@ -95,7 +95,7 @@ From the Cloud Automation UI, configure the Dynatrace secret by following these 
     * Name MUST be `dynatrace`
     * Scope value of `dynatrace-secret`
     * Add two Key-value pairs with these names
-        * `DT_TENANT` = your Dynatrace URL like "https://[YOUR-ENVIRONMENT-ID].sprint.dynatracelabs.com"
+        * `DT_TENANT` = your Dynatrace URL like "https://abcefg.live.dynatrace.com"
             * Make sure no `\` at the end
             * Make sure this is the Dynatrace URL and NOT the Cloud Automation URL
         * `DT_API_TOKEN` = Make sure this is the Dynatrace API token and NOT the Cloud Automation Token NOR the Dynatrace OneAgent installation token 

@@ -83,7 +83,7 @@ A custom script called `setup-dynatrace-config.sh` is used to call both monaco a
     ```
     -----------------------------------------------------------------------------------
     Setting up Dynatrace config
-    Dynatrace  : https://XXXXX.sprint.dynatracelabs.com
+    Dynatrace  : https://abcefg.live.dynatrace.com
     Starting   : Mon Nov  8 13:48:47 EST 2021
     -----------------------------------------------------------------------------------
     Running monaco for project = setup
