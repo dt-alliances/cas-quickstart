@@ -10,7 +10,7 @@ The UI enhancement is coming, but for now you need to manually adjust the `shipy
 
 1. Open up the project in your git upstream repo and adjust the `shipyard.yaml` file in the `master` branch 
 
-1. Add the `mytask-interactive` task as the first task as shown below.  You can keep the `evaluation` task.
+1. Add the `- name: "mytask-interactive"` task as the first task as shown below.  You can keep the `evaluation` task.
 
     ```
     apiVersion: spec.keptn.sh/0.2.2
@@ -23,7 +23,7 @@ The UI enhancement is coming, but for now you need to manually adjust the `shipy
           sequences:
           - name: "mysequence"
             tasks: 
-            - name: "mytask-interactive"  <<------------------- **** ADD THIS ROW ****
+            - name: "mytask-interactive"
             - name: "evaluation"
               properties:
                 timeframe: "5m"
@@ -75,7 +75,7 @@ The UI enhancement is coming, but for now you need to manually adjust the `webho
     spec:
       webhooks:
         - type: sh.keptn.event.mytask-interactive.triggered
-          sendFinished: false    <<---------------------- **** ADD THIS ROW ****
+          sendFinished: false
           requests:
             - curl --request POST --data
         ...

@@ -10,7 +10,7 @@ The UI enhancement is coming, but for now you need to manually adjust the `shipy
 
 1. Open up the project in your git upstream repo and adjust the `shipyard.yaml` file in the `master` branch 
 
-1. Add the `mytask-silent` task as shown below. You can keep the `evaluation` task.
+1. Add the `- name: "mytask-silent"` task as shown below. You can keep the `evaluation` task.
 
     ```
     apiVersion: spec.keptn.sh/0.2.2
@@ -23,7 +23,7 @@ The UI enhancement is coming, but for now you need to manually adjust the `shipy
           sequences:
           - name: "mysequence"
             tasks: 
-            - name: "mytask-silent"  <<------------------- **** ADD THIS ROW ****
+            - name: "mytask-silent"
             - name: "evaluation"
               properties:
                 timeframe: "5m"
@@ -109,7 +109,7 @@ The UI enhancement is coming, but for now you need to manually adjust the webhoo
     spec:
       webhooks:
         - type: sh.keptn.event.mytask-silent.triggered
-          sendFinished: true    <<-------------------------- **** ADD THIS ROW ****
+          sendFinished: true
           requests:
             - curl --request POST --data
         ...

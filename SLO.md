@@ -27,7 +27,7 @@ spec:
       sequences:
       - name: "mysequence"
         tasks: 
-        - name: "evaluation"  <<------ built-in task
+        - name: "evaluation"
           properties:
             timeframe: "5m"
 ```
@@ -112,7 +112,7 @@ The SLO evaluation was performed by the [Cloud Automation Dynatrace service](htt
 
 SLI data can be retrieved in a few different ways and if you look in the `scripts/create-keptn-project.sh` file you will see command that added the `dynatrace.conf.yaml` to the demo app project with the query from a Dynatrace dashboard option.  
 
-See this [Dynatrace service README page](https://github.com/keptn-contrib/dynatrace-service/blob/master/documentation/sli-configuration/configuration-of-dashboard-sli-slo-queries.md) for SLI setup options and this [Dynatrace service README page](https://github.com/keptn-contrib/dynatrace-service/blob/master/documentation/sli-configuration/slis-and-slos-via-dynatrace-dashboard.md) for dashboard setup and how you can adjust the dashboard with different SLO targets.
+See this [Dynatrace service README page](https://github.com/keptn-contrib/dynatrace-service/blob/master/documentation/slis-via-files.md) for SLI setup options and this [Dynatrace service README page](https://github.com/keptn-contrib/dynatrace-service/blob/master/documentation/slis-via-dashboard.md) for dashboard setup and how you can adjust the dashboard with different SLO targets.
 
 You can read more too on the Quality Gate page within the [Keptn docs](https://keptn.sh/docs/0.10.x/quality_gates/get_started)
 
