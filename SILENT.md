@@ -51,7 +51,6 @@ The UI enhancement is coming, but for now you need to manually adjust the `shipy
         {
             "event": "{{.type}}",
             "stage": "{{.data.stage}}",
-            "custom": "{{.data.custom}}",
             "shkeptncontext": "{{.shkeptncontext}}",
             "id": "{{.id}}"
         }
@@ -79,7 +78,6 @@ The UI enhancement is coming, but for now you need to manually adjust the `shipy
         {
             "event": "{{.type}}",
             "stage": "{{.data.stage}}",
-            "custom": "{{.data.custom}}",
             "shkeptncontext": "{{.shkeptncontext}}",
             "id": "{{.id}}"
         }
