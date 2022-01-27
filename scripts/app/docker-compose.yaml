@@ -6,7 +6,7 @@ services:
     ports:
       - 80:8080
     environment:
-      - DT_CUSTOM_PROP=keptn_project=casdemo keptn_stage=production keptn_service=casdemoapp keptn_deployment=manual
+      - DT_CUSTOM_PROP=keptn_project=demo keptn_stage=production keptn_service=casdemoapp keptn_deployment=manual
   sendload:
     hostname: load
     image: dtdemos/casdemoappload:1.0.0
