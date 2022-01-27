@@ -17,5 +17,5 @@ services:
       - NUM_THREADS=1
       - THINK_TIME=250
       - TEST_SCRIPT=load.jmx
-      - TEST_DEBUG=true
+      - TEST_DEBUG=false
     restart: always
