@@ -58,6 +58,7 @@ The new webhook should look like this
 
 <img src="images/webhook-int-list.png" width="75%" height="75%">
 
+<!--
 ## Step 4: Adjust the webhook configuration in git
 
 The UI enhancement is coming, but for now you need to manually adjust the `webhook.yaml` to tell Cloud Automation web service to wait for the custom task to send back finished status.  
@@ -88,8 +89,9 @@ The UI enhancement is coming, but for now you need to manually adjust the `webho
 ```
 Once you edit the webhook file in GIT, you should not edit the webhook in the Web UI else the `sendFinished` setting will need to be manually re-added back.
 ```
+-->
 
-## Step 5: Trigger sequence
+## Step 4: Trigger sequence
 
 1. To trigger the sequence, from the SSH terminal run this command
 
@@ -127,7 +129,7 @@ Once you edit the webhook file in GIT, you should not edit the webhook in the We
     The event you see in the webhook.site is what would be sent to any down stream tool.  So the payload that was send should be customized with the expected format and the data required to drive any logic.
     ```
 
-## Step 6: Indicate the mytask-interactive is finished
+## Step 5: Indicate the mytask-interactive is finished
 
 Since you setup an interactive webhook, you must send back a `mytask-interactive.finished` event to indicate the task is finished. This event must include unique `triggeredid` shown earlier.
 
@@ -163,7 +165,7 @@ Since you setup an interactive webhook, you must send back a `mytask-interactive
 
     <img src="images/mysequence-complete.png" width="50%" height="50%">
 
-## Step 3: Experiment with different status values
+## Step 6: (OPTIONAL) Experiment with different status values
 
 To see how different values of the `status` and `result` get displayed in the bridge, you can adjust the events file used by the `trigger.sh` script.  
 
