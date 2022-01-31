@@ -49,6 +49,15 @@ Now that you have seen and executed both types of webhooks, its time to define y
 
 See the [Dynatrace Lifecycle orchestration Docs](https://www.dynatrace.com/support/help/how-to-use-dynatrace/cloud-automation/lifecycle-orchestration#integrate-external-tools-with-webhooks) for additional details as well as the [Keptn Create a Webhook integration Docs](https://keptn.sh/docs/0.10.x/integrations/webhooks/#create-a-webhook-integration)
 
+# Some upcoming changes
+
+* [Webhook: ExtendPayload placeholders to reference full Cloud Event Payload](https://github.com/keptn/keptn/issues/6661)
+* [Webhook: Allow filtering for data.result of event](https://github.com/keptn/keptn)
+* [Bridge: Add checkbox to set the sendStarted flag ](https://github.com/keptn/keptn/issues/6059)
+* [Bridge: task subscriptions UI does not provide a way to re-create a subscription for all events](https://github.com/keptn/keptn/issues/6627)
+* [Bridge: Trigger a sequence](https://github.com/keptn/keptn/issues/4507)
+* [Bridge: Restructuring of Bridge settings for project](https://github.com/keptn/keptn/issues/5282)
+
 <hr>
 
 [<img src="images/prev.png" width="50px" height="50"/>](INTERACTIVE.md) [<img src="images/next.png" width="50px" height="50"/>](README.md)
