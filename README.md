@@ -83,11 +83,11 @@ Follow the instructions for each step below in order.
 
 ## 2. Try out the quick start use cases
 
-* [Webhooks](WEBHOOK.md)
+* [Webhooks Overview and Use Cases](WEBHOOK.md)
 
 ## 3. Build your own integration
 
-* [Webhooks](BUILDWEBHOOK.md)
+* [Webhooks Development Recipe](BUILDWEBHOOK.md)
 
 # Resources
 
