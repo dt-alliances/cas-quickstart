@@ -12,13 +12,13 @@ IMAGE=$REPOSITORY/casdemoappload:1.0.0
 
 echo ""
 echo "========================================================"
-echo "Building images"
+echo "Building image $IMAGE"
 echo "========================================================"
 docker build -t $IMAGE .
 
 echo ""
 echo "========================================================"
-echo "Ready to push images ?"
+echo "Ready to push image $IMAGE ?"
 echo "========================================================"
 read -rsp "Press ctrl-c to abort. Press any key to continue"
 docker push $IMAGE
