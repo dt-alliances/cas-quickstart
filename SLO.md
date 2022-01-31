@@ -38,6 +38,18 @@ For now, don't worry about the details you are just going to trigger the sequenc
 
 ## Step 3: Configure the webhook
 
+For a quick way to see the events that would be send to a downstream tool, you will configure the webhook subscriptions to send the HTTP request and payload to this web site `https://webhook.site`  
+
+When you later trigger a sequence, you can view the JSON payloads configured in your webhook subscriptions within the https://webhook.site as shown below.
+
+<img src="images/webhook-site.png" width="50%" >
+
+### Setup Steps
+
+1. To get you unique webhook URL, just open https://webhook.site in a new browser tab.  Keep this tab open while using this guide. You can use the copy to clipboard button to get your unique URL that you will configure later in the guide as part of the webhooks configuration.
+
+    <img src="images/webhook-site-copy-url.png" width="75%" height="75%"> 
+
 1. From the Cloud Automation UI, click on the project `demo`
 
 1. On the left menu click on the `Uniform` option
@@ -69,6 +81,10 @@ The webhooks should look like this
 <img src="images/webhook-list-eval.png" width="75%" height="75%">
 
 ## Step 5: Trigger sequence
+
+A UI enhancement is coming, but for now you need to make an API call or use the Keptn CLI to trigger a sequence to run.  To make this task easier, the `scripts/trigger.sh` script in this repo will send in the various Cloud Automation events using the Keptn CLI and JSON event templates found in the `scripts/events/` subfolder.  You will run this script from the SSH shell when directed to as part of the use cases.
+
+### Setup steps
 
 1. To trigger the sequence, from the SSH terminal run this command
 

@@ -11,25 +11,28 @@ A Dynatrace API token is needed for by Dynatrace service to support SLO evaluati
     <img src="images/dynatrace.png" width="70%" height="70%">
  
 1. Click `Generate new token` button
-1. Given the token a name and add these scopes:
-    * Access problem and event feed, metrics, and topology (API v1)
-    * Create and read synthetic monitors, locations, and nodes (API v1)
-    * Read configuration (API v1)
-    * Write configuration (API v1)
-    * Capture request data (API v1)
-    * Data ingest, e.g.: metrics and events (API v1)
-    * Ingest events (API v2)
-    * Read metrics (API v2)
-    * Ingest metrics (API v2)
-    * Read entities (API v2)
-    * Read problems (API v2)
-    * Write problems (API v2)
+1. Copy these names into the `filter` box and select it to add to the scope.  Repeat for all scopes below:
+    * API V1
+        * Access problem and event feed, metrics, and topology
+        * Create and read synthetic monitors, locations, and nodes
+        * Read configuration
+        * Write configuration
+        * Capture request data
+        * Data ingest, e.g.: metrics and events
+    * API V2
+        * Ingest events
+        * Read metrics
+        * Ingest metrics
+        * Read entities
+        * Read problems
+        * Write problems
+1. Click Generate Token
 
-💥💥💥 **IMPORTANT NOTE** 💥💥💥
+    💥💥💥 **IMPORTANT NOTE** 💥💥💥
 
-```
-Save your token to a safe place, for you only get to see it once and you need it later during the setup.
-```
+    ```
+    Save your token to a safe place, for you only get to see it once and you need it later during the setup.
+    ```
 
 ## Step 2: Download and install monaco
 

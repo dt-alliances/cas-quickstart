@@ -4,6 +4,8 @@ For this use case you will simulate what a downstream system does by triggering 
 
 This custom task, `mytask-interactive`, does nothing but allows you to understand how to run the interactive model as to help you setup your custom integration.
 
+<img src="images/mysequence-flow.png" width="75%" height="75%">
+
 ## Step 1: Adjust the shipyard configuration in git
 
 The UI enhancement is coming, but for now you need to manually adjust the `shipyard.yaml` to adjust the sequence tasks.

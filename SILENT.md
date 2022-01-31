@@ -116,11 +116,11 @@ The UI enhancement is coming, but for now you need to manually adjust the webhoo
     
 1. Commit your change
 
-💥💥💥 **IMPORTANT NOTE** 💥💥💥
+    💥💥💥 **IMPORTANT NOTE** 💥💥💥
 
-```
-Once you edit the webhook file in GIT, you should not edit the webhook in the Web UI else the `sendFinished` setting will need to be manually re-added back.
-```
+    ```
+    Once you edit the webhook file in GIT, you should not edit the webhook in the Web UI else the `sendFinished` setting will need to be manually re-added back.
+    ```
 
 ## Step 6: Trigger sequence
 
@@ -160,6 +160,26 @@ In the webhook.site to view the generated events.  You should see the following 
 * `mytask-silent.triggered`
 * `mytask-silent.finished`
 * `evaluation.finished`
+
+## Step 9: Review Cloud Events
+
+Get familiar with the cloud events that are taking place within the sequence. You can click the computer icon next to the sequence, task and task events as shown below.
+
+<img src="images/event-icon.png">
+
+Notice too how each sequence has a unique content ID named `SHKEPTNCONTENT` within the event data and how each event has a unique `ID`.
+ 
+<img src="images/event-context.png">
+
+Notice too how each sequence has two event types `triggered` and `finished` and each task has three event types: `triggered`, `started` and `finished`.
+
+<img src="images/event-types.png">
+
+💥💥💥 **IMPORTANT NOTE** 💥💥💥
+
+Lastly, notice how the `ID` of a task `TRIGGERED` event is the `TRIGGERED ID` for each of the tasks subsequence events.  Understanding the `TRIGGERED ID` is important for the next section: interactive webhooks.
+
+<img src="images/event-triggered.png" width="75%" >
 
 <hr>
 
