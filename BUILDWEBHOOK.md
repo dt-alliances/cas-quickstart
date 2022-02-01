@@ -82,10 +82,11 @@ Many APIs require `Content-Type: application/json` so be sure to add that. And u
 
 See the [Dynatrace Lifecycle orchestration Docs](https://www.dynatrace.com/support/help/how-to-use-dynatrace/cloud-automation/lifecycle-orchestration#integrate-external-tools-with-webhooks) for additional details as well as the [Keptn Create a Webhook integration Docs](https://keptn.sh/docs/0.10.x/integrations/webhooks/#create-a-webhook-integration)
 
-# Some upcoming changes
+# Some upcoming changes and enhancement backlogs
 
 * [Webhook: ExtendPayload placeholders to reference full Cloud Event Payload](https://github.com/keptn/keptn/issues/6661)
 * [Webhook: Allow filtering for data.result of event](https://github.com/keptn/keptn)
+* [Webhook: Allow the the URL use a secret](https://github.com/keptn/keptn/issues/6727)
 * [Bridge: Add checkbox to set the sendStarted flag ](https://github.com/keptn/keptn/issues/6059)
 * [Bridge: task subscriptions UI does not provide a way to re-create a subscription for all events](https://github.com/keptn/keptn/issues/6627)
 * [Bridge: Trigger a sequence](https://github.com/keptn/keptn/issues/4507)
