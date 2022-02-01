@@ -72,7 +72,7 @@ requests:
 ...
 ```
 
-## #2 - Add Content-Type in the header header
+## #2 - Add Content-Type in the header
 
 Many APIs require `Content-Type: application/json` so be sure to add that. And use the the "key" icon to add your secrets.
 
