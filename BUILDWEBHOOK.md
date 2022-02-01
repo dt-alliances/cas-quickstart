@@ -47,7 +47,9 @@ Now that you have seen and executed both types of webhooks, its time to define y
 
 # Tips
 
-1. As you setup your webhook, add your API token as a Cloud Automation Secret and use it within subscription page to add it to your URL or Auth header.  This way your token will not be saved in the GIT project in clear text.  For example:
+## #1 - Use Secrets 
+
+As you setup your webhook, add your API token as a Cloud Automation Secret and use it within subscription page to add it to your URL or Auth header.  For example:
 
 💥💥💥 **IMPORTANT NOTE** 💥💥💥
 
@@ -55,12 +57,26 @@ Pick `keptn-webhook-service` as the Scope
 
 <img src="images/secret.png" width="75%" height="75%">
 
-💥💥💥 **IMPORTANT NOTE** 💥💥💥
+This way your token will NOT be saved in the GIT project in clear text.  This is an example of what gets saved to the `webhook.yaml` file.
+
+```
+...
+- type: sh.keptn.event.evaluation.finished
+requests:
+- "curl --header 'Authorization: Bearer {{.env.secret_gremlin_token}}'
+    --header 'Content-Type: application/json' --request POST --data
+    '{\"hypothesis\":\"Traffic will be load-balanced to the two unaffected
+    hosts.\"}'
+    https://api.gremlin.com/v1/scenarios/7689a9ce-54dc-4015-89a9-ce54dcc0\
+    1533/runs?teamId=54a4a0b0-c54d-4e4c-a4a0-b0c54d5e4c7a"
+...
+```
+
+## #2 - Add Content-Type in the header header
 
 Many APIs require `Content-Type: application/json` so be sure to add that. And use the the "key" icon to add your secrets.
 
 <img src="images/subscription-secret.png" width="75%" height="75%">
-
 
 # Resources
 
