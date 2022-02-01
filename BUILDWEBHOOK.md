@@ -45,6 +45,23 @@ Now that you have seen and executed both types of webhooks, its time to define y
 1. Document the examples
 1. Demo and get feedback
 
+# Tips
+
+1. As you setup your webhook, add your API token as a Cloud Automation Secret and use it within subscription page to add it to your URL or Auth header.  This way your token will not be saved in the GIT project in clear text.  For example:
+
+💥💥💥 **IMPORTANT NOTE** 💥💥💥
+
+Pick `keptn-webhook-service` as the Scope
+
+<img src="images/secret.png" width="75%" height="75%">
+
+💥💥💥 **IMPORTANT NOTE** 💥💥💥
+
+Many APIs require `Content-Type: application/json` so be sure to add that. And use the the "key" icon to add your secrets.
+
+<img src="images/subscription-secret.png" width="75%" height="75%">
+
+
 # Resources
 
 See the [Dynatrace Lifecycle orchestration Docs](https://www.dynatrace.com/support/help/how-to-use-dynatrace/cloud-automation/lifecycle-orchestration#integrate-external-tools-with-webhooks) for additional details as well as the [Keptn Create a Webhook integration Docs](https://keptn.sh/docs/0.10.x/integrations/webhooks/#create-a-webhook-integration)
@@ -57,6 +74,7 @@ See the [Dynatrace Lifecycle orchestration Docs](https://www.dynatrace.com/suppo
 * [Bridge: task subscriptions UI does not provide a way to re-create a subscription for all events](https://github.com/keptn/keptn/issues/6627)
 * [Bridge: Trigger a sequence](https://github.com/keptn/keptn/issues/4507)
 * [Bridge: Restructuring of Bridge settings for project](https://github.com/keptn/keptn/issues/5282)
+* [Bridge: Show secret scope and keys in overview table](https://github.com/keptn/keptn/issues/6296)
 
 <hr>
 
