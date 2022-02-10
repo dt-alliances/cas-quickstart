@@ -4,8 +4,7 @@
     "stage":"production",
     "service": "casdemoapp",
     "status": "succeeded",
-    "result": "pass", 
-    "custom":"this is more custom data"
+    "result": "pass"
   },
   "source": "cas-quickstart",
   "specversion": "1.0",

@@ -5,7 +5,6 @@
    "data":{
       "project":"demo",
       "stage":"production",
-      "service":"casdemoapp",
-      "custom":"this is custom data"
+      "service":"casdemoapp"
    }
 }
