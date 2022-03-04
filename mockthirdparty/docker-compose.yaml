@@ -1,0 +1,10 @@
+version: '3'
+services:
+  demoapp:
+    hostname: mockthirdparty
+    image: dtdemos/mockthirdparty:1.0.0
+    ports:
+      - 8080:5000
+    environment:
+      - KEPTN_BASEURL=${KEPTN_BASEURL}
+      - KEPTN_API_TOKEN=${KEPTN_API_TOKEN}
