@@ -6,4 +6,6 @@ scripts/events/*.json
 credentials.json
 sequence.txt
 trigger.txt
-curloutput.txt
+simulate-problem-curl-ouput.txt
+*.log
+.env
