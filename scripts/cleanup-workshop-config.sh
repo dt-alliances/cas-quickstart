@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ./_workshop-config.lib
+source ./_common.sh
 
 CUSTOM_CONFIG_PATH=./custom-config
 MONACO_PROJECT_BASE_PATH=./monaco/projects

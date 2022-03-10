@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ./_workshop-config.lib
+source ./_common.sh
 
 export OWNER=$1    # This is required for the dashboard monaco project
 if [ -z $OWNER ]; then
