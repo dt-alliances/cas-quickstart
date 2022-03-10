@@ -1,6 +1,6 @@
 # Overview
 
-This `mockthirdparty` application is used to **"Mock"** the behavior of downstream third party platforms as to facilitate `active` [webhook subscriptions](https://keptn.sh/docs/0.13.x/integrations/webhooks/). The application in written in python and runs within Docker. 
+This `mockthirdparty` application is used to **"Mock"** the behavior of downstream third party platforms as to facilitate `active` [webhook subscriptions](https://keptn.sh/docs/0.12.x/integrations/webhooks/). The application in written in python and runs within Docker. 
 
 ## Usage
 
@@ -33,16 +33,29 @@ These are opened in browser or from a subscription.
     * `KEPTN_API_TOKEN` is the API token from this same environment 
 1. Start up the application
     ```
-    sudo docker-compose up
+    sudo docker-compose up -d
     ```
-1. Start up the application
+1. Verify its running
+
+    ```
+    sudo docker ps
+    ```
+
+    you should see, something like
+    ```
+    CONTAINER ID   IMAGE                          COMMAND                  CREATED         STATUS         PORTS                                       NAMES
+    1986da43a9a7   dtdemos/mockthirdparty:1.0.0   "python3 ./app.py"       2 minutes ago   Up 2 minutes   0.0.0.0:8080->5000/tcp, :::8080->5000/tcp   ec2-user_demoapp_1
+    ```
+
+# Stop the application
+
     ```
     sudo docker-compose down
     ```
 
 # Webhook subscription setup
 
-Add a [webhook subscription](https://keptn.sh/docs/0.13.x/integrations/webhooks/) as follows.
+Add a [webhook subscription](https://keptn.sh/docs/0.12.x/integrations/webhooks/) as follows.
 
 * TASK suffix = `triggered`
 * URL HEADERS
