@@ -44,7 +44,7 @@ Follow the instructions for each step below in order.
 
 First read this [Webhooks Subscriptions Overview](10-WEBHOOK.md), then move to these use cases:
 
-1. [SLO evaluation demo](11-SLO.md) - try out the three variants of webhook subscriptions using a demo sequence
+1. [SLO evaluation demo](11-SLO.md) - try out a simple sequence that just calls a SLO evaluation
 1. [Software Release demo](12-RELEASE.md) - Trigger a software delivery sequence
 1. [Incident Management demo](13-INCIDENT.md) - trigger a Dynatrace problem to start a incident management sequence
 
