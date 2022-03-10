@@ -10,86 +10,49 @@ The main goal of Dynatrace Cloud Automation is to enable Development, DevOps and
 * Supporting Declarative SLO and SLI specification based on SRE principles supporting and metric data source
 * Using GitOps based delivery and operational workflows based on Git
 
-This guide currently showcases webhook integrations, but the plan is to incorporate a Cloud Automation remote execution plane as to aide in the development and test of custom Cloud Automation services.
+This guide currently showcases Cloud Automation webhook integrations, but the plan is to incorporate a Cloud Automation remote execution plane as to aide in the development and test of custom Cloud Automation services.
 
-For help or questions, email [Rob Jahn](https://www.linkedin.com/in/robjahn/) of the Dynatrace Tech Alliances team @ rob.jahn@dynatrace.com 
+For help or questions, email [Rob Jahn](https://www.linkedin.com/in/robjahn/) of the Dynatrace Technical Alliances team @ rob.jahn@dynatrace.com 
 
-# Prerequisite knowledge
+# Quick start prerequisite knowledge
 
-### Dynatrace
+### Dynatrace (15 minutes)
 
-* [Dynatrace Platform Overview](https://www.dynatrace.com/support/help/get-started/)
-* [OneAgent](https://www.dynatrace.com/support/help/setup-and-configuration/dynatrace-oneagent)
-* [Services](https://www.dynatrace.com/support/help/how-to-use-dynatrace/transactions-and-services)
+* [Dynatrace platform](https://www.dynatrace.com/support/help/get-started/what-is-dynatrace)
 * [Dynatrace web interface](https://www.dynatrace.com/support/help/get-started/navigation)
+* [Dynatrace OneAgent](https://www.dynatrace.com/support/help/setup-and-configuration/dynatrace-oneagent)
+* [Dynatrace service monitoring](https://www.dynatrace.com/support/help/how-to-use-dynatrace/transactions-and-services)
 
-### Cloud Automation architecture and design concepts
+### Cloud Automation architecture and design concepts (10 minutes)
 
-* [Cloud Automation Overview Blog](https://www.dynatrace.com/news/blog/deliver-cloud-native-applications-faster-with-dynatrace-cloud-automation-module/)
-* [Overview video](https://www.youtube.com/watch?v=H4tZhpKxVC4)
-
-# Prerequisites
-
-The following items comprise your environment
-
-1. Dynatrace Accounts:
-    * Dynatrace environment
-    * Dynatrace Cloud Automation instance
-1. Permissions:
-    * You manage team members access using Dynatrace account settings. 
-    * Cloud Automation uses the same SSO as Dynatrace, so you will use the same login for this  
-1. Compute
-    * You provide and manage a virtual machine that hosts the OneAgent and sample application. 
-    * See the next section below for details
-
-# Dynatrace UI versus Cloud Automation UI
-
-There are two different web user interfaces that you need to have open for this guide.  Each has its own URL as shown below.
-* On the left is the **Dynatrace SaaS** - Used for monitoring of the demo application
-* On the right is the **Cloud Automation web UI (a.k.a. Cloud Automation "bridge")** - Used to view the Cloud Automation workflows, called sequences, and configuration of webhooks
-
-<img src="images/dt-and-bridge.png" width="75%" height="75%">
-
-# Demo Environment
-
-Refer to the picture below for the components that make up this guide.
-
-<img src="images/setup.png" width="75%" height="75%">
-
-1. **Virtual Machine** - hosts the demo app, OneAgent, and Keptn CLI 
-1. **Sample application** - runs within a local Docker compose network. The application runs in a single container. A load generator container is also sending web requests continuously.  The Docker images have already been created and published to Dockerhub
-1. **Sample application web interface** - viewable in a browser
-1. **Dynatrace OneAgent** - monitor host and the sample application
-1. **Dynatrace** - web interface with full-stack observability
-1. **Dynatrace Cloud Automation web UI** - Used to view the Cloud Automation workflows called sequences and configuration of webhooks
-1. **Command line utility** - allows creating projects, onboarding services, and sending new artifact events to CloudAutomation.
-1. **Upstream Repo** - stores all the configuration files for the Cloud Automation demo application
-1. **webook.site** - used to quickly see the events that would be send to a downstream tool
-
-# Invite others to collaborate
-
-Follow [these instructions](USERADMIN.md) for adding users.
+* [Read Cloud Automation Overview Blog](https://www.dynatrace.com/news/blog/deliver-cloud-native-applications-faster-with-dynatrace-cloud-automation-module/)
+* [Read Cloud Automation webhooks Blog](https://www.dynatrace.com/news/blog/dynatrace-enables-tool-agnostic-automation-for-your-application-lifecycle)
 
 # Quick start guide
 
 Follow the instructions for each step below in order.
 
-## 1. Environment Setup
+### 1. Environment Setup (30-45 minutes)
 
-* [Provision Virtual Machine with the OneAgent](VM.md)
-* [Setup Dynatrace monitoring configuration](SETUP.md)
-* [Start the sample application](APP.md)
-* [Onboard sample application to Cloud Automation](ONBOARD.md)
+* [Quick Start Environment Overview](01-QUICKSTART.md)
+* [Provision Virtual Machine with the OneAgent](02-VM.md)
+* [Setup Dynatrace monitoring configuration](03-DTCONFIG.md)
+* [Start the sample application](04-APP.md)
+* [Onboard sample applications to Cloud Automation](05-ONBOARD.md)
 
-## 2. Try out the quick start use cases
+### 2. Quick start use cases (30 minutes per use case)
 
-* [Webhooks Overview and Use Cases](WEBHOOK.md)
+First read this [Webhooks Subscriptions Overview](10-WEBHOOK.md), then move to these use cases:
 
-## 3. Build your own integration
+1. [SLO evaluation demo](11-SLO.md) - try out the three variants of webhook subscriptions using a demo sequence
+1. [Software Release demo](12-RELEASE.md) - Trigger a software delivery sequence
+1. [Incident Management demo](13-INCIDENT.md) - trigger a Dynatrace problem to start a incident management sequence
 
-* [Webhooks Development Recipe](BUILDWEBHOOK.md)
+### 3. Build your own webhook integration
 
-# Resources
+* [Webhooks Development Recipe](20-BUILDWEBHOOK.md)
+
+# More Resources
 
 ## Dynatrace Cloud Automation
 
@@ -102,4 +65,3 @@ Follow the instructions for each step below in order.
 * [Keptn Dynatrace Service](https://github.com/keptn-contrib/dynatrace-service)
 * [Keptn community](https://keptn.sh/community)
 * [Keptn Release Notes](https://github.com/keptn/keptn/releases)
-
