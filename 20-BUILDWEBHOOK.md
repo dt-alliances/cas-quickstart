@@ -67,14 +67,18 @@ Before you start, I encourage you to review these videos:
 Here are some items that may impact you:
 
 * [Webhook: HTTP call containing semicolon fails](https://github.com/keptn/keptn/issues/7042)
-* [Webhook: ExtendPayload placeholders to reference full Cloud Event Payload](https://github.com/keptn/keptn/issues/6661)
+* [Webhook: Extend Payload placeholders to reference full Cloud Event Payload](https://github.com/keptn/keptn/issues/6661)
 * [Webhook: Allow filtering for data.result of event](https://github.com/keptn/keptn/issues/6010)
 * [Webhook: Allow the the URL use a secret](https://github.com/keptn/keptn/issues/6727)
+* [Webhook: line breaks Breaking webhook curl requests](https://github.com/keptn/keptn/issues/6998)
+* [Webhook: Add webhook payload preview](https://github.com/keptn/keptn/issues/6794)
+* [Webhook: Add Test webhook configuration](https://github.com/keptn/keptn/issues/5261)
 * [Bridge: Add checkbox to set the sendStarted flag ](https://github.com/keptn/keptn/issues/6059)
 * [Bridge: task subscriptions UI does not provide a way to re-create a subscription for all events](https://github.com/keptn/keptn/issues/6627)
 * [Bridge: Trigger a sequence](https://github.com/keptn/keptn/pull/6958)
 * [Bridge: Restructuring of Bridge settings for project](https://github.com/keptn/keptn/issues/5282)
 * [Bridge: Show secret scope and keys in overview table](https://github.com/keptn/keptn/issues/6296)
+* [CLI: Expand keptn to trigger any sequence](https://github.com/keptn/keptn/issues/7032)
 
 ## #2 - Use Secrets 
 
