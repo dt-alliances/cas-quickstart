@@ -186,7 +186,7 @@ def openticket():
             "incidentUrl": "https://incident-tool?incidentNum=123"
         }
     elif responsejson["type"] == 'sh.keptn.event.deployment.finished':
-        responsejson["data"]["test"] = {
+        responsejson["data"]["deployment"] = {
             "deploymentURL": "https://deployment-tool?jobNumber=123",
             "deploymentResults": "success"
             }
