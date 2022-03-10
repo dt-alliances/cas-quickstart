@@ -55,7 +55,7 @@
         "height": 38
       },
       "tileFilter": {},
-      "markdown": "KQG.Total.Pass=90%;KQG.Total.Warning=70%;KQG.Compare.WithScore=pass;KQG.Compare.Results=1;KQG.Compare.Function=avg"
+      "markdown": "KQG.Total.Pass=90%;KQG.Total.Warning=20%;KQG.Compare.WithScore=pass;KQG.Compare.Results=1;KQG.Compare.Function=avg"
     },
     {
       "name": "Custom chart",

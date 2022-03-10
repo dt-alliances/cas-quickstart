@@ -1,5 +1,8 @@
 delete:
-  - "dashboard/KQG;project=demo;stage=production;service=casdemoapp"
+  - "dashboard/KQG;project=slo-demo;stage=staging;service=casdemoapp"
+  - "dashboard/KQG;project=incident-demo;stage=production;service=casdemoapp"
+  - "dashboard/KQG;project=release-demo;stage=production;service=casdemoapp"
+  - "dashboard/KQG;project=release-demo;stage=production;service=casdemoapp"
   - "auto-tag/keptn_project"
   - "auto-tag/keptn_service"
   - "auto-tag/keptn_stage"
