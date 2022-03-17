@@ -7,7 +7,7 @@ attachRules:
     tags:
     - context: CONTEXTLESS
       key: keptn_project
-      value: demo
+      value: $PROJECT
     - context: CONTEXTLESS
       key: keptn_service
       value: $SERVICE

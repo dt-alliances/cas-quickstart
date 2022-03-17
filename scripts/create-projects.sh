@@ -57,7 +57,6 @@ create_project() {
       echo "----------------------------------------"
       $command
     fi
-
     echo "----------------------------------------"
     echo "Complete create project: $KEPTN_PROJECT"
     echo "----------------------------------------"

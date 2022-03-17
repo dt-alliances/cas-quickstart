@@ -9,7 +9,7 @@ fi
 
 IMAGE=$REPOSITORY/casdemoapp:1.0.0
 
-docker build -t $IMAGE .
+#docker build -t $IMAGE .
 
 echo ""
 echo "========================================================"
@@ -18,4 +18,9 @@ echo "========================================================"
 
 read -rsp "Press ctrl-c to abort. Press any key to continue"
 echo ""
-. ../scripts/app/start-app.sh
+
+docker run \
+    --env FEATURE_NUMBER=1 \
+    -p 8080:8080 \
+    -it \
+    $IMAGE

@@ -170,6 +170,16 @@ Lastly, notice how the `ID` of a task `TRIGGERED` event is the `TRIGGERED ID` fo
 
 <img src="images/event-triggered.png" width="75%" >
 
+# Adjust to auto-approve the production sequence
+
+If you don't want to manually approve, then in your GIT repo adjust the `shipyard.yaml` file to have this for the `approval` task as follows.  See [Keptn Docs](https://keptn.sh/docs/0.12.x/manage/shipyard/#approval) for more details on this task.
+
+```
+- name: approval
+  properties:
+    pass: automatic
+    warning: automatic
+```
 
 <hr>
 
