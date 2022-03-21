@@ -13,7 +13,7 @@ Before you start, I encourage you to review these videos:
 
 ## Software Test and Release
 
-| Task Category         | Silent Webhook                                                               | Interactive Webhook                                                                                                                                               |
+| Task Category         | Passive Webhook                                                               | Active Webhook                                                                                                                                               |
 |-----------------------|------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Chaos Testing         | Trigger a Test to start                                                      | Trigger and send back results of test                                                                                                                             |
 |                       | Trigger a Test to stop                                                       | Trigger and send back confirmation it stopped                                                                                                                     |
@@ -31,7 +31,7 @@ Before you start, I encourage you to review these videos:
 
 ## Incident Management and Problem Remediation
 
-| Task Category         | Silent Webhook                                                               | Interactive Webhook                                                                                                                                               |
+| Task Category         | Passive Webhook                                                               | Active Webhook                                                                                                                                               |
 |-----------------------|------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Incident Management   | Open a Ticket                                                                | Open and send back ticket #                                                                                                                                       |
 |                       | Update a Ticket                                                              | Update and send back confirmation                                                                                                                                 |
@@ -42,7 +42,7 @@ Before you start, I encourage you to review these videos:
 
 # Suggested Recipe
 
-1. Determine the best interface of the downstream platform to configure a Cloud Automation webhook against. For example, a configurable an inbound webhook or an API. If yes, then a Cloud Automation silent or interactive pattern is possible.
+1. Determine the best interface of the downstream platform to configure a Cloud Automation webhook against. For example, a configurable an inbound webhook or an API. If yes, then a Cloud Automation `passive` or `active` pattern is possible.
 1. Determine if the downstream platform supports the ability to make the Cloud Automation API call to send back a task `finished` event using an API call. If yes, then a Cloud Automation `active` pattern is possible. For example, this could be implemented as:
     * use customer definable scripts
     * Predefined templates
