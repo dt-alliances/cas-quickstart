@@ -14,6 +14,19 @@ As shown below, the web UI will change colors based on the enabled feature.
 
 A feature is set using a Docker build argument that sets an environment variable the application code looks for. 
 
+## Running the application
+
+A `docker-compose.yaml` file can be used to start up both the `demoapp` and `demoappload` application.  The application will be exposed on port 80 and the `demoappload` application will continuously send requests to it.
+
+1. Start up the application
+    ```
+    sudo docker-compose up
+    ```
+1. Start up the application
+    ```
+    sudo docker-compose down
+    ```
+
 # Development
 
 1. You must have node installed locally.

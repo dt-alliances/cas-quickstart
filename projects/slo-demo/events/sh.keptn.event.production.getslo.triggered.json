@@ -1,0 +1,10 @@
+{
+   "type": "sh.keptn.event.production.getslo.triggered",
+   "specversion":"1.0",
+   "source":"cloud-automation-quickstart",
+   "data":{
+      "project":"slo-demo",
+      "stage":"production",
+      "service":"casdemoapp"
+   }
+}

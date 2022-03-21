@@ -55,7 +55,7 @@
         "height": 38
       },
       "tileFilter": {},
-      "markdown": "KQG.Total.Pass=90%;KQG.Total.Warning=70%;KQG.Compare.WithScore=pass;KQG.Compare.Results=1;KQG.Compare.Function=avg"
+      "markdown": "KQG.Total.Pass=90%;KQG.Total.Warning=20%;KQG.Compare.WithScore=pass;KQG.Compare.Results=1;KQG.Compare.Function=avg"
     },
     {
       "name": "Custom chart",
@@ -70,7 +70,7 @@
       "tileFilter": {},
       "filterConfig": {
         "type": "MIXED",
-        "customName": "Response time (P95);sli=svc_rt_p95;pass=<+10%,<600",
+        "customName": "Response time (P95);sli=svc_rt_p95;pass=<+10%,<1000",
         "defaultName": "Custom chart",
         "chartConfig": {
           "legendShown": true,
@@ -106,7 +106,7 @@
       "tileFilter": {},
       "filterConfig": {
         "type": "MIXED",
-        "customName": "Response time (P90);sli=svc_rt_p90;pass=<+10%,<550",
+        "customName": "Response time (P90);sli=svc_rt_p90;pass=<+10%,<1000",
         "defaultName": "Custom chart",
         "chartConfig": {
           "legendShown": true,
@@ -142,7 +142,7 @@
       "tileFilter": {},
       "filterConfig": {
         "type": "MIXED",
-        "customName": "Response time (P50);sli=svc_rt_p50;pass=<+10%,<500",
+        "customName": "Response time (P50);sli=svc_rt_p50;pass=<+10%,<1000",
         "defaultName": "Custom chart",
         "chartConfig": {
           "legendShown": true,

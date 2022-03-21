@@ -1,6 +1,21 @@
 config:
-  - release_validation_dashboard: "release_validation_dashboard.json"
+  - slo-demo: "release_validation_dashboard.json"
+  - incident-demo: "release_validation_dashboard.json"
+  - release-demo-staging: "release_validation_dashboard.json"
+  - release-demo-production: "release_validation_dashboard.json"
 
-release_validation_dashboard:
-  - name: "KQG;project=demo;stage=production;service=casdemoapp"
+slo-demo:
+  - name: "KQG;project=slo-demo;stage=production;service=casdemoapp"
+  - owner: "{{ .Env.OWNER }}"
+
+incident-demo:
+  - name: "KQG;project=incident-demo;stage=production;service=casdemoapp"
+  - owner: "{{ .Env.OWNER }}"
+
+release-demo-staging:
+  - name: "KQG;project=release-demo;stage=staging;service=casdemoapp"
+  - owner: "{{ .Env.OWNER }}"
+
+release-demo-production:
+  - name: "KQG;project=release-demo;stage=production;service=casdemoapp"
   - owner: "{{ .Env.OWNER }}"

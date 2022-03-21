@@ -1,0 +1,15 @@
+{
+  "data": {
+    "project":"release-demo",
+    "stage":"staging",
+    "service": "casdemoapp",
+    "configurationChange": {
+      "values": {
+        "image": "dtdemos/casdemoapp:1.0.0"
+      }
+    }
+  },
+  "source": "release-demo",
+  "specversion": "1.0",
+  "type": "sh.keptn.event.staging.release.triggered"
+}
