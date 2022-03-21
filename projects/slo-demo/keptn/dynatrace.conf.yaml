@@ -3,7 +3,7 @@ dashboard: query
 attachRules:
   tagRule:
   - meTypes:
-    - SERVICE
+    - PROCESS_GROUP_INSTANCE
     tags:
     - context: CONTEXTLESS
       key: keptn_project
