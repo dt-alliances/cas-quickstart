@@ -65,3 +65,25 @@ First read this [Webhooks Subscriptions Overview](10-WEBHOOK.md), then move to t
 * [Keptn Dynatrace Service](https://github.com/keptn-contrib/dynatrace-service)
 * [Keptn community](https://keptn.sh/community)
 * [Keptn Release Notes](https://github.com/keptn/keptn/releases)
+
+# Guide versions
+
+The `main` branch is the latest version of the guide.  However, for major updates [github tags](https://github.com/dt-alliances/cloud-automation-quickstart/tags) are used.
+
+| Tag | description |
+| ----| ------------|
+| -   | latest version that has three demo projects and a mock application to aide in the demo |
+| [initial](https://github.com/dt-alliances/cloud-automation-quickstart/tree/initial) | First version of the guide where there was a single demo app and single shipyard file |
+
+To use a tagged version locally, just clone the repo and use these commands:
+
+```
+# list tags with descriptions
+git tag -n
+
+# checkout a tag
+git checkout [tagname]
+
+# checkout back to main branch
+git checkout main
+```
