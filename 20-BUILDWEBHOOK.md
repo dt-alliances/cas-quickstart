@@ -62,7 +62,7 @@ Before you start, I encourage you to review these videos:
 
 # Tips
 
-## #1 - Enhancements/Bug Issue List
+## 1 - Enhancements/Bug Issue List
 
 Here are some items that may impact you:
 
@@ -73,6 +73,7 @@ Here are some items that may impact you:
 * [Webhook: line breaks Breaking webhook curl requests](https://github.com/keptn/keptn/issues/6998)
 * [Webhook: Add webhook payload preview](https://github.com/keptn/keptn/issues/6794)
 * [Webhook: Add Test webhook configuration](https://github.com/keptn/keptn/issues/5261)
+* [Webhook: Add enable/disable flag to webhook subscriptions](https://github.com/keptn/keptn/issues/6055)
 * [Bridge: Add checkbox to set the sendStarted flag ](https://github.com/keptn/keptn/issues/6059)
 * [Bridge: task subscriptions UI does not provide a way to re-create a subscription for all events](https://github.com/keptn/keptn/issues/6627)
 * [Bridge: Trigger a sequence](https://github.com/keptn/keptn/pull/6958)
@@ -80,7 +81,7 @@ Here are some items that may impact you:
 * [Bridge: Show secret scope and keys in overview table](https://github.com/keptn/keptn/issues/6296)
 * [CLI: Expand keptn to trigger any sequence](https://github.com/keptn/keptn/issues/7032)
 
-## #2 - Use Secrets 
+## 2 - Use Secrets 
 
 As you setup your webhook, add your API token as a Cloud Automation Secret and use it within subscription page to add it to your URL or Auth header.  For example:
 
@@ -105,7 +106,7 @@ requests:
 ...
 ```
 
-## #3 - Add Content-Type in the header
+## 3 - Add Content-Type in the header
 
 Many APIs require `Content-Type: application/json` so be sure to add that. And use the the "key" icon to add your secrets.
 
