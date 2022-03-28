@@ -32,7 +32,7 @@ PAYLOAD='
   "eventType": "'$EVENT_TYPE'",
   "source" : "cloud-automation-quickstart",
   "description" : "There was a problem detected which should trigger the Cloud Automation Sequence",
-  "entitySelector": "type(SERVICE),entityName(DemoNodeJsApp),tag(keptn_project:demo,keptn_service:casdemoapp,keptn_stage:production)",
+  "entitySelector": "type(SERVICE),tag(keptn_project:incident-demo)",
   "properties":{
     "Triggered by": "simulate-problem.sh"
   }
