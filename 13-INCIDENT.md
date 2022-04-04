@@ -154,7 +154,17 @@ If you want to see Dynatrace send the cloud event to start the incident manageme
         * Name: `Content-Type`
         * Secret Header value: `No`
         * Value: `application/cloudevents+json`
-    * Payload:
+    * Payload
+    
+        Use the JSON payload below, but replace the ProblemURL string with the URL from your environment:
+        ```
+        "ProblemURL":"https://[YOUR-ENVIRONMENT]/ui/problems?displayId={ProblemID}"
+        ```
+        For example:
+        ```
+        "ProblemURL":"https://abcd.live.dynatrace.com/ui/problems?displayId={ProblemID}"
+        ```
+
         ```
         {
             "specversion":"1.0",
@@ -170,7 +180,7 @@ If you want to see Dynatrace send the cloud event to start the incident manageme
                     "ProblemID":"{ProblemID}",
                     "PID":"{PID}",
                     "ProblemTitle":"{ProblemTitle}",
-                    "ProblemURL":"{ProblemURL}",
+                    "ProblemURL":"https://[YOUR-ENVIRONMENT]/ui/problems?displayId={ProblemID}",
                     "ProblemDetails":{ProblemDetailsJSON},
                     "Tags":"{Tags}",
                     "ImpactedEntities":{ImpactedEntities},

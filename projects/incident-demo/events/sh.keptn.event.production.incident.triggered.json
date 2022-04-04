@@ -9,7 +9,7 @@
       "incident": {
          "ProblemID": "P-220355",
          "ProblemTitle": "Simulated problem 2022-03-02--12.50.37",
-         "ProblemURL": "https://syh360.dynatrace-managed.com/e/1c819cc7-d7f5-40d9-b90f-b80c8610a392/#problems/problemdetails;pid=7516639605033512361_1646243438539V2",
+         "ProblemURL": "https://syh360.dynatrace-managed.com/e/1c819cc7-d7f5-40d9-b90f-b80c8610a392/ui/problems?displayId=P-220420",
          "State": "OPEN",
          "Tags": "keptn_project:demo, keptn_service:casdemoapp, keptn_stage:production, keptn_deployment:manual"
       }
