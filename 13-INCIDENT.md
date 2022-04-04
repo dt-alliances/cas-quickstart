@@ -64,10 +64,11 @@ In this you will see a stage `production` each with a sequence called `incident`
                 "service": "{{.data.service}}",
                 "stage": "{{.data.stage}}",
                 "incident": {
-                "ProblemID": "{{.data.incident.ProblemID}}",
-                "ProblemTitle": "{{.data.incident.ProblemTitle}}",
-                "State": "{{.data.incident.State}}",
-                "Tags": "{{.data.incident.Tags}}"
+                    "ProblemID": "{{.data.incident.ProblemID}}",
+                    "ProblemURL": "{{.data.incident.ProblemURL}}",
+                    "ProblemTitle": "{{.data.incident.ProblemTitle}}",
+                    "State": "{{.data.incident.State}}",
+                    "Tags": "{{.data.incident.Tags}}"
                 }
             },
             "shkeptncontext": "{{.shkeptncontext}}",
