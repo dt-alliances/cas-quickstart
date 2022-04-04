@@ -29,9 +29,9 @@ A `docker-compose.yaml` file can be used to start up both the `demoapp` and `dem
 
 # Development
 
-1. You must have node installed locally.
-1. Once you clone the repo, you need to run npm install to download the required modules.  I used npm: '7.5.0',
-  node: '15.8.0'
+1. You must have [node installed](https://nodejs.org/en/download/) locally.
+1. Once you clone the repo, you need to run `npm install` to download the required modules.  I used npm: '8.5.0',
+  node: '16.14.2'
   
     ```
     npm update
