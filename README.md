@@ -16,6 +16,10 @@ For help or questions, email [Rob Jahn](https://www.linkedin.com/in/robjahn/) of
 
 # Quick start prerequisite knowledge
 
+Please see these two videos for a demo of the two main use cases:
+* [Dynatrace for SREs: Data-Driven Problem Remediation](https://www.youtube.com/watch?v=HBt7uJTmdI4&list=PLqt2rd0eew1YFx9m8dBFSiGYSBcDuWG38&index=8&t=4s)
+* [Dynatrace for DevOps Platform Engineers: Deploy, Test, Evaluate, Repeat](https://www.youtube.com/watch?v=E5Mfmh4BlmU&list=PLqt2rd0eew1YFx9m8dBFSiGYSBcDuWG38&index=7&t=4s)
+
 ### Dynatrace (15 minutes)
 
 * [Dynatrace platform](https://www.dynatrace.com/support/help/get-started/what-is-dynatrace)

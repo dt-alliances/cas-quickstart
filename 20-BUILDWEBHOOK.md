@@ -4,10 +4,9 @@ Now that you have seen and executed both types of webhooks, its time to define y
 
 # Webhook examples
 
-Before you start, I encourage you to review these videos:
+Before you start, I encourage you to review this video:
 
-* [Cloud Automation Webhooks for Slack video](https://www.youtube.com/watch?v=0vJS7ecayGw&t=267s)
-* [Cloud Automation Webhooks for GitHub Actions video](https://www.youtube.com/watch?v=d32WHNmtqOs)
+* [Orchestrate your DevOps tools: Deep Dive into Dynatrace](https://www.youtube.com/watch?v=0ihEqg1FiHc&list=PLqt2rd0eew1YFx9m8dBFSiGYSBcDuWG38&index=6)
 
 # Example Use Cases for webhooks
 
