@@ -1,3 +1,7 @@
+> [!IMPORTANT] 
+This repo is now archived.  Dynatrace now provides the [Automation Solution](https://www.dynatrace.com/platform/automations) as the current capability to turn answers into action quickly
+and at scale by leveraging observability and security data to drive Workflow Automations use cases.
+
 # Overview
 
 The guide shows how to setup and use the [Dynatrace Cloud Automation](https://www.dynatrace.com/platform/cloud-automation/) that provides an easy, event-based integration platform for external tools such as testing services, notification services, and incident management services. 
